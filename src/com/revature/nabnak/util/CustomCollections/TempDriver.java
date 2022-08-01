@@ -26,7 +26,13 @@ public class TempDriver {
         numList.add(1);
         numList.add(12);
 
-        System.out.println(numList.contains(91));
+        System.out.println("The number list before we removed the 91, does it contain it? " + numList.contains(91));
+        numList.remove(12);
+        System.out.println("The number list after we removed the 91, does it contain it? " + numList.contains(12));
+        numList.add(13);
+        System.out.println(numList.get(5));
+
+
 
     }
 }

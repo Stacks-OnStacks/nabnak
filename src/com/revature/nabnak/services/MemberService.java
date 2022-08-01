@@ -9,9 +9,16 @@ import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
 import java.io.*;
 
 public class MemberService {
+    // Attributes
     CustomLogger customLogger = CustomLogger.getLogger(true); // same exact instance of the logger being pull in the menus
-    MemberDao memberDao = new MemberDao();
+    private final MemberDao memberDao;
+    private Member sessionMember = null;
 
+    // CONSTRUCTOR
+    public MemberService(MemberDao memberDao){
+        this.memberDao = memberDao;
+    }
+    // Methods
     public Member registerMember(Member newMember) {
         try {
 
@@ -27,15 +34,23 @@ public class MemberService {
 
             return newMember;
 
-        } catch (InvalidUserInputException e) {
+        } catch (InvalidUserInputException | ResourcePersistanceException e) {
             // TODO: NEW READ ME (Lines 38-41)
+            customLogger.warn(e.getMessage());
+            return null;
+        } catch (RuntimeException e){
+            customLogger.warn(e.getMessage());
+            return null;
+        } catch (Exception e) {
             customLogger.warn(e.getMessage());
             return null;
         }
     }
     // TODO: NEW READ ME (Lines 43-73)
     public Member login(String email, String password){
-        return memberDao.loginCredentialCheck(email, password);
+        Member member = memberDao.loginCredentialCheck(email, password);
+        sessionMember = member;
+        return member;
     }
 
     // TODO: NEW READ ME (Lines 76 - 105)
@@ -65,6 +80,18 @@ public class MemberService {
             }
         }
         return true;
+    }
+
+    public Member getSessionMember(){
+        return sessionMember;
+    }
+
+    public void logout(){
+        sessionMember = null;
+    }
+
+    public boolean isSessionActive(){
+        return sessionMember != null;
     }
 
 }

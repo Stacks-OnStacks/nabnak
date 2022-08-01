@@ -27,7 +27,6 @@ public class LinkedList<E> implements List<E>{
         Node<E> runner = head;
 
         while(runner != null){
-            System.out.println(runner.data);
             if(runner.data.equals(element)) return true;
 
             runner = runner.nextNode;
@@ -42,6 +41,33 @@ public class LinkedList<E> implements List<E>{
 
     @Override
     public boolean remove(E element) {
+        Node<E> prevNode = null;
+        Node<E> currentNode = head;
+
+        if(size == 0 || element == null) return false;
+
+        // parse the linkedlist to find the right one, how? while currentNode != null, or forLoop of size
+        // currentNode == null
+
+        for(int i = 0; i < size; i++){
+
+            if(currentNode.data != null && currentNode.data.equals(element)) {
+                if (currentNode == head) {
+                    head = currentNode.nextNode; // replace the head that will be removed with the next head in the linked list
+                } else if(currentNode == tail){
+                    tail = prevNode;
+                    prevNode.nextNode = null;
+                } else {
+                    prevNode.nextNode = currentNode.nextNode;
+                }
+
+                size--;
+                return true;
+            }
+            prevNode = currentNode; // this re-assignment must come first so the currentNode is save as the previous
+            currentNode = currentNode.nextNode; // then we move onto the next node
+        }
+
         return false;
     }
 

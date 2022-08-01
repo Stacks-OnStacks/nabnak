@@ -13,8 +13,11 @@ import java.time.LocalDateTime;
 
 public class RegisterMenu extends Menu{
     CustomLogger customLogger = CustomLogger.getLogger(true);
-    public RegisterMenu(BufferedReader terminalReader, MenuRouter menuRouter) {
+    private final MemberService memberService;
+
+    public RegisterMenu(BufferedReader terminalReader, MenuRouter menuRouter, MemberService memberService) {
         super("Register", "/register", terminalReader, menuRouter);
+        this.memberService = memberService;
     }
 
     @Override
@@ -45,10 +48,15 @@ public class RegisterMenu extends Menu{
 
         Member newMember = new Member(email, fullName, experienceMonths, registrationDate, password);
         //TODO: LOGG INFO AS ENTER customerLogger.log(arguments)
-        MemberService memberService = new MemberService();
-        memberService.registerMember(newMember);
-
-        customLogger.info("Navigating to dashboard for " + newMember.getEmail());
-        menuRouter.transfer("/dashboard");
+        Member member = memberService.registerMember(newMember);
+        // What value is our session? null
+        if(member == null){
+            System.out.println("Registration failed, please try again");
+            menuRouter.transfer("/register");
+        } else {
+            memberService.login(member.getEmail(), member.getPassword());
+            customLogger.info("Navigating to dashboard for " + newMember.getEmail());
+            menuRouter.transfer("/dashboard");
+        }
     }
 }

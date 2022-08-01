@@ -12,9 +12,11 @@ import static com.revature.nabnak.util.AppState.shutdown;
 
 public class WelcomeMenu extends Menu {
     CustomLogger customLogger = CustomLogger.getLogger(true);
+    private final MemberService memberService; // declaration, technically null
 
-    public WelcomeMenu(BufferedReader terminalReader, MenuRouter menuRouter) {
+    public WelcomeMenu(BufferedReader terminalReader, MenuRouter menuRouter, MemberService memberService) {
         super("Welcome", "/welcome", terminalReader, menuRouter);
+        this.memberService = memberService; // initialize the value of the memberService
     }
 
     @Override // this indicates we are overriding the method we are inheriting
@@ -46,7 +48,6 @@ public class WelcomeMenu extends Menu {
             case "3":
                 System.out.println("User wishes to view other members");
                 //TODO: NEW READ ME(Lines 44-49)
-                MemberService memberService = new MemberService();
                 Member[] members = memberService.readAll();
                 for(Member member: members){
                     System.out.println(member);
