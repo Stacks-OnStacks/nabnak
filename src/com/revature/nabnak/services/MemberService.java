@@ -40,34 +40,7 @@ public class MemberService {
 
     // TODO: NEW READ ME (Lines 76 - 105)
     public Member[] readAll(){
-        Member[] members = new Member[30];
-
-        // try-with-resources automatically closes files for us
-        try (
-                FileReader fileReader = new FileReader("resources/data.txt");
-                BufferedReader reader = new BufferedReader(fileReader);
-        ) {
-
-            String line = reader.readLine();
-            int index = 0;
-
-            while (line != null) {
-                String[] info = line.split(",");
-                Member member = new Member();
-                member.setEmail(info[0]);
-                member.setFullName(info[1]);
-                member.setExperienceMonths(Integer.parseInt(info[2])); member.setRegistrationDate(info[3]);
-                member.setPassword(info[4]);
-                members[index] = member;
-                index++;
-                line = reader.readLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally { //finally always executs
-            System.out.println("Hello from the finally block");
-        }
-
+        Member[] members = memberDao.findAll();
         return members;
     }
 
