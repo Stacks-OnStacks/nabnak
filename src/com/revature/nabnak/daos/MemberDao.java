@@ -1,6 +1,8 @@
 package com.revature.nabnak.daos;
 
 import com.revature.nabnak.models.Member;
+import com.revature.nabnak.util.CustomCollections.LinkedList;
+import com.revature.nabnak.util.CustomCollections.List;
 import com.revature.nabnak.util.CustomLogger;
 
 import java.io.*;
@@ -25,8 +27,8 @@ public class MemberDao implements Crudable<Member> {
     }
 
     @Override
-    public Member[] findAll() {
-        Member[] members = new Member[30];
+    public List<Member> findAll() {
+        List<Member> members = new LinkedList<>();
 
         // try-with-resources automatically closes files for us
         try (
@@ -35,7 +37,6 @@ public class MemberDao implements Crudable<Member> {
         ) {
 
             String line = reader.readLine();
-            int index = 0;
 
             while (line != null) {
                 String[] info = line.split(",");
@@ -44,8 +45,9 @@ public class MemberDao implements Crudable<Member> {
                 member.setFullName(info[1]);
                 member.setExperienceMonths(Integer.parseInt(info[2])); member.setRegistrationDate(info[3]);
                 member.setPassword(info[4]);
-                members[index] = member;
-                index++;
+
+                members.add(member);
+
                 line = reader.readLine();
             }
         } catch (IOException e) {

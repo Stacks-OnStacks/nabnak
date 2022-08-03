@@ -1,5 +1,7 @@
 package com.revature.nabnak.daos;
 
+import com.revature.nabnak.util.CustomCollections.List;
+
 public interface Crudable<T> { // generic <T> we can use to assign as
     // Generics help insure type saftey
 
@@ -9,7 +11,7 @@ public interface Crudable<T> { // generic <T> we can use to assign as
     T create(T newObject);
 
     //Read
-    T[] findAll();
+    List<T> findAll();
     T findById(String id);
 
     // Update

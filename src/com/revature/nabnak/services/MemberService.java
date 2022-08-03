@@ -2,6 +2,7 @@ package com.revature.nabnak.services;
 
 import com.revature.nabnak.daos.MemberDao;
 import com.revature.nabnak.models.Member;
+import com.revature.nabnak.util.CustomCollections.List;
 import com.revature.nabnak.util.CustomLogger;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
@@ -54,8 +55,8 @@ public class MemberService {
     }
 
     // TODO: NEW READ ME (Lines 76 - 105)
-    public Member[] readAll(){
-        Member[] members = memberDao.findAll();
+    public List<Member> readAll(){
+        List<Member> members = memberDao.findAll();
         return members;
     }
 
@@ -72,10 +73,10 @@ public class MemberService {
 
     // TODO: IMPLEMENT MEEEEEEE!!!!!!!
     public boolean isEmailAvailable(String email){
-        Member[] members = readAll();
-        for(Member member: members){
-            if(member == null) break;
-            if(member.getEmail().equals(email)){
+        List<Member> members = readAll();
+        for(int i = 0; i < members.size(); i++){
+            if(members.get(i) == null) break;
+            if(members.get(i).getEmail().equals(email)){
                 return false;
             }
         }

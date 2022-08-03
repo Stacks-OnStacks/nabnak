@@ -1,6 +1,8 @@
 package com.revature.nabnak.daos;
 
 import com.revature.nabnak.models.Card;
+import com.revature.nabnak.util.CustomCollections.LinkedList;
+import com.revature.nabnak.util.CustomCollections.List;
 
 public class CardDao implements Crudable<Card> {
     @Override
@@ -9,8 +11,8 @@ public class CardDao implements Crudable<Card> {
     }
 
     @Override
-    public Card[] findAll() {
-        return new Card[0];
+    public List<Card> findAll() {
+        return new LinkedList<>();
     }
 
     @Override

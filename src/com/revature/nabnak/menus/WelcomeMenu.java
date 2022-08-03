@@ -2,6 +2,7 @@ package com.revature.nabnak.menus;
 
 import com.revature.nabnak.models.Member;
 import com.revature.nabnak.services.MemberService;
+import com.revature.nabnak.util.CustomCollections.List;
 import com.revature.nabnak.util.CustomLogger;
 import com.revature.nabnak.util.MenuRouter;
 
@@ -48,9 +49,9 @@ public class WelcomeMenu extends Menu {
             case "3":
                 System.out.println("User wishes to view other members");
                 //TODO: NEW READ ME(Lines 44-49)
-                Member[] members = memberService.readAll();
-                for(Member member: members){
-                    System.out.println(member);
+                List<Member> members = memberService.readAll();
+                for(int i = 0; i < members.size(); i++){
+                    System.out.println(members.get(i));
                 }
                 break;
             case "4":

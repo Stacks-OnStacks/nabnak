@@ -19,5 +19,9 @@ public class CardService {
          return false;
      }
 
+     public Card addCard(Card newCard){
+        return null;
+     }
+
 
 }
