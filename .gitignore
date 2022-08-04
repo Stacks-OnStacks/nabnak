@@ -2,3 +2,4 @@
 out
 nabnak.iml
 src/com/revature/nabnak/showAdd.java
+src/main/resources/db.properties
