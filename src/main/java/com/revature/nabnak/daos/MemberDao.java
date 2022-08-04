@@ -1,61 +1,60 @@
 package com.revature.nabnak.daos;
 
 import com.revature.nabnak.models.Member;
+import com.revature.nabnak.util.ConnectionFactory;
 import com.revature.nabnak.util.CustomCollections.LinkedList;
 import com.revature.nabnak.util.CustomCollections.List;
 import com.revature.nabnak.util.CustomLogger;
 
 import java.io.*;
+import java.sql.*;
 
 public class MemberDao implements Crudable<Member> {
 
     CustomLogger customLogger = CustomLogger.getLogger(true);
 
+
     @Override
-    public Member create(Member newMember) {
-        File memoryFile = new File("resources/data.txt");
-        // This beaut, is a try-with-resources block. This allows for anything that extends AutoClosable to be automatically closed
-        try (FileWriter fileWriter = new FileWriter(memoryFile, true);) {
-            fileWriter.write(newMember.writeToFile());
-            // TODO: LOGG THE INFO AS PERSISTED customerLogger.log(arguments)
-            customLogger.log("Member has been persisted: " + newMember);
-            return newMember;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+    public Member create(Member newObject) {
+        return null;
     }
 
     @Override
     public List<Member> findAll() {
-        List<Member> members = new LinkedList<>();
+        try(Connection conn = ConnectionFactory.getConnectionFactory().getConnection();){
 
-        // try-with-resources automatically closes files for us
-        try (
-                FileReader fileReader = new FileReader("resources/data.txt");
-                BufferedReader reader = new BufferedReader(fileReader);
-        ) {
+            System.out.println(conn); // quick connection check
 
-            String line = reader.readLine();
+            String sql = "select * from employee where department_id = ? and salary > ?";
 
-            while (line != null) {
-                String[] info = line.split(",");
-                Member member = new Member();
-                member.setEmail(info[0]);
-                member.setFullName(info[1]);
-                member.setExperienceMonths(Integer.parseInt(info[2])); member.setRegistrationDate(info[3]);
-                member.setPassword(info[4]);
+            String tableName = "employee; drop table walmart_employee;";
+            int depID = 2;
 
-                members.add(member);
 
-                line = reader.readLine();
+
+            // Statement statement = conn.createStatement(); // starting point for executing queries
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, depID);
+            ps.setInt(2, 100);
+
+            ResultSet resultSet = ps.executeQuery();
+
+            while (resultSet.next()){
+                System.out.print(resultSet.getString("department_id") + " ");
+                System.out.print(resultSet.getString("email") + " ");
+                System.out.print(resultSet.getString("first_name") + " ");
+                System.out.print(resultSet.getString("last_name") + " ");
+                System.out.print(resultSet.getString("dob") + " ");
+                System.out.print(resultSet.getString("emp_position") + " ");
+                System.out.println(resultSet.getString("salary"));
+
             }
-        } catch (IOException e) {
+
+            return null;
+        } catch (SQLException e){
             e.printStackTrace();
-        } finally { //finally always executs
-            System.out.println("Hello from the finally block");
+            return null;
         }
-        return members;
     }
 
     @Override
@@ -72,39 +71,8 @@ public class MemberDao implements Crudable<Member> {
     public boolean delete(String id) {
         return false;
     }
-    // 4 Primary operations for the DAO is Create, Read, Update & Delete (CRUD) operations
 
-    public Member loginCredentialCheck(String email, String password){
-
-        // try-with-resources automatically closes files for us
-        try (
-                FileReader fileReader = new FileReader("resources/data.txt");
-                BufferedReader reader = new BufferedReader(fileReader);
-        ) {
-
-            String line = reader.readLine();
-
-            while (line != null) {
-                String[] info = line.split(",");
-                System.out.println(info[0]);
-                if (info[0].equals(email) && info[4].equals(password)) {
-                    Member member = new Member();
-                    member.setEmail(info[0]);
-                    member.setFullName(info[1]);
-                    member.setExperienceMonths(Integer.parseInt(info[2]));
-                    member.setRegistrationDate(info[3]);
-                    member.setPassword(info[4]);
-
-                    return member;
-                }
-                line = reader.readLine();
-            }
-            return null;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        } finally { //finally always executs
-            System.out.println("Hello from the finally block");
-        }
+    public Member loginCredentialCheck(String email, String password) {
+        return null;
     }
 }

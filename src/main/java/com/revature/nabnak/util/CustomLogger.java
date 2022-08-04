@@ -24,7 +24,7 @@ public class CustomLogger {
         Writer writer = null;
         this.printToConsole = printToConsole;
         try {
-            writer = new FileWriter("resources/log.txt", true);
+            writer = new FileWriter("src/main/resources/log.txt", true);
         } catch (IOException e) {
             printMessageToConsole("ERROR", "Could not open connection to file. Only printing logs to console.");
         }
@@ -95,7 +95,7 @@ public class CustomLogger {
     }
 
     public void log(String message, Object... extra) { // This is variable arguments handles x amount of arguments passed after the String message
-        try(Writer logWriter = new FileWriter("resources/log.txt", true);) {
+        try(Writer logWriter = new FileWriter("src/main/resources/log.txt", true);) {
 
             String messFormated = String.format(message, extra);
             logWriter.write(messFormated + "\n");
