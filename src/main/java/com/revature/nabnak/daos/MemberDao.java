@@ -25,9 +25,9 @@ public class MemberDao implements Crudable<Member> {
 
             System.out.println(conn); // quick connection check
 
-            String sql = "select * from employee where department_id = ? and salary > ?";
+            String sql = "select * from employee where department_id = ? and emp_position > ?";
 
-            String tableName = "employee; drop table walmart_employee;";
+            String tableName = "employee; drop table employee;";
             int depID = 2;
 
 
@@ -35,7 +35,7 @@ public class MemberDao implements Crudable<Member> {
             // Statement statement = conn.createStatement(); // starting point for executing queries
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, depID);
-            ps.setInt(2, 100);
+            ps.setString(2, tableName);
 
             ResultSet resultSet = ps.executeQuery();
 

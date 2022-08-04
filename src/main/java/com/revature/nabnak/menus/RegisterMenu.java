@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class RegisterMenu extends Menu{
     CustomLogger customLogger = CustomLogger.getLogger(true);
@@ -41,7 +42,8 @@ public class RegisterMenu extends Menu{
 
 
         // TODO: What on god's green earth is LocalDateTime?
-        String registrationDate = LocalDateTime.now().toString();
+        java.sql.Date registrationDate = new java.sql.Date(new Date().getTime());
+        System.out.println(registrationDate);
 
         // This is a form of logging
         // System.out.printf("New user has registerd under \n User:%s,%s,%s,%s", email, fullName, experienceMonths, registrationDate).println(); //printf is a formatter

@@ -66,7 +66,7 @@ public class MemberService {
         if(newMember.getEmail() == null || newMember.getEmail().trim().equals("")) return false;
         if(newMember.getFullName() == null || newMember.getFullName().trim().equals("")) return false;
         if(newMember.getExperienceMonths() < 0 ) return false;
-        if(newMember.getRegistrationDate() == null || newMember.getRegistrationDate().trim().equals("")) return false;
+        if(newMember.getRegistrationDate() == null || newMember.getRegistrationDate().toString().trim().equals("")) return false;
         if(newMember.getPassword() == null || newMember.getPassword().trim().equals("")) return false;
         return true;
     }

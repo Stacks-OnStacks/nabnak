@@ -11,7 +11,6 @@ public class TempDriver {
 
         members.add(new Member());
         members.add(new Member());
-        members.add(new Member("ply@mail.com", "ply wood", 12, LocalDateTime.now().toString()));
         members.add(new Member());
 
         System.out.println(members.size());

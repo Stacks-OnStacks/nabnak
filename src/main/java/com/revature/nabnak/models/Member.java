@@ -1,5 +1,7 @@
 package com.revature.nabnak.models;
 
+import java.sql.Date;
+
 public class Member { // classes are simply blueprints for that object
 
     // Objects - instances of a class in memory
@@ -13,7 +15,7 @@ public class Member { // classes are simply blueprints for that object
     private String email;
     private String fullName;
     private int experienceMonths;
-    private String registrationDate;
+    private Date registrationDate;
     private String password; // access modifier private privatizes the variable to only be accessible by the class
 
     // Constructor
@@ -28,7 +30,7 @@ public class Member { // classes are simply blueprints for that object
         // All class in java inherit information from the Object class
     }
 
-    public Member(String email, String fullName, int experienceMonths, String registrationDate){
+    public Member(String email, String fullName, int experienceMonths, Date registrationDate){
         // email, fullName, etc is only available to the scope of this Constructor. This is known as shadowing.
         this.email = email;
         this.fullName = fullName;
@@ -38,7 +40,7 @@ public class Member { // classes are simply blueprints for that object
 
     // the constructor is requiring 4 parameteres
     // parameter definition requires the Datatype to proceed tghe variable name, much like declaractor of variable
-    public Member(String email, String fullName, int experienceMonths, String registrationDate, String password){
+    public Member(String email, String fullName, int experienceMonths, Date registrationDate, String password){
         // email, fullName, etc is only available to the scope of this Constructor. This is known as shadowing.
         this.email = email;
         this.fullName = fullName;
@@ -79,11 +81,11 @@ public class Member { // classes are simply blueprints for that object
         return experienceMonths;
     }
 
-    public void setRegistrationDate(String registrationDate) {
+    public void setRegistrationDate(Date registrationDate) {
         this.registrationDate = registrationDate;
     }
 
-    public String getRegistrationDate() {
+    public Date getRegistrationDate() {
         return registrationDate;
     }
 
