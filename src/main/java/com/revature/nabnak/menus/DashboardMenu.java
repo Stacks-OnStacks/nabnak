@@ -20,6 +20,8 @@ public class DashboardMenu extends Menu{
 
     @Override
     public void render() throws IOException {
+        System.out.println(memberService);
+        System.out.println(memberService.getSessionMember());
         System.out.println("Welcome back " + memberService.getSessionMember().getFullName() +  " Here is your dashboard!\n 1) Make a card \n 2) Logout" );
 
         String userInput = terminalReader.readLine();

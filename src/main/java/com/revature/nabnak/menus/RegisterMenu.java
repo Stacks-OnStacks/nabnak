@@ -50,6 +50,7 @@ public class RegisterMenu extends Menu{
 
         Member newMember = new Member(email, fullName, experienceMonths, registrationDate, password);
         //TODO: LOGG INFO AS ENTER customerLogger.log(arguments)
+        System.out.println(memberService);
         Member member = memberService.registerMember(newMember);
         // What value is our session? null
         if(member == null){

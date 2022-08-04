@@ -5,6 +5,8 @@ import com.revature.nabnak.util.ConnectionFactory;
 import com.revature.nabnak.util.CustomCollections.LinkedList;
 import com.revature.nabnak.util.CustomCollections.List;
 import com.revature.nabnak.util.CustomLogger;
+import com.revature.nabnak.util.exceptions.InvalidUserInputException;
+import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
 
 import java.io.*;
 import java.sql.*;
@@ -15,43 +17,65 @@ public class MemberDao implements Crudable<Member> {
 
 
     @Override
-    public Member create(Member newObject) {
-        return null;
+    public Member create(Member newMember) {
+        try (Connection conn = ConnectionFactory.getConnectionFactory().getConnection()){
+            String sql = "insert into members (email, password, full_name, experience_months, registration_date) values (?,?,?,?,?)"; // we want to set up for a preparedStatement (this prevents SQL injection)
+
+            // ; drop table members will be prevented
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            // our ps now needs to be adjusted with the appropriate values instead of the ?
+            ps.setString(2, newMember.getPassword());
+            ps.setString(1, newMember.getEmail());
+            ps.setString(3, newMember.getFullName());
+            ps.setInt(4, newMember.getExperienceMonths());
+            ps.setDate(5, newMember.getRegistrationDate());
+
+            // at this point it's a full sql statement with values where ? are
+
+            int checkInsert = ps.executeUpdate(); // INSERT, UPDATE or DELETE
+
+            if(checkInsert == 0){
+                throw new ResourcePersistanceException("Member was not entered into the database.");
+            }
+
+            return newMember;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
     public List<Member> findAll() {
-        try(Connection conn = ConnectionFactory.getConnectionFactory().getConnection();){
 
-            System.out.println(conn); // quick connection check
-
-            String sql = "select * from employee where department_id = ? and emp_position > ?";
-
-            String tableName = "employee; drop table employee;";
-            int depID = 2;
+        try (Connection conn = ConnectionFactory.getConnectionFactory().getConnection()){
+            List<Member> members = new LinkedList<>();
 
 
+            String sql = "select * from members"; // sql string should always be a sql statement
 
-            // Statement statement = conn.createStatement(); // starting point for executing queries
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setInt(1, depID);
-            ps.setString(2, tableName);
 
-            ResultSet resultSet = ps.executeQuery();
+            Statement s = conn.createStatement(); // estbalish a statement is availble
+            ResultSet rs = s.executeQuery(sql); // actually execute the query statement and take in a ResultSet (the data from our database)
 
-            while (resultSet.next()){
-                System.out.print(resultSet.getString("department_id") + " ");
-                System.out.print(resultSet.getString("email") + " ");
-                System.out.print(resultSet.getString("first_name") + " ");
-                System.out.print(resultSet.getString("last_name") + " ");
-                System.out.print(resultSet.getString("dob") + " ");
-                System.out.print(resultSet.getString("emp_position") + " ");
-                System.out.println(resultSet.getString("salary"));
+            while(rs.next()){ // as long as there is a next value (another record) it will continue to add to the linkedList
+                Member member = new Member();
 
+                member.setEmail(rs.getString("email"));
+                member.setFullName(rs.getString("full_name"));
+                member.setExperienceMonths(rs.getInt("experience_months"));
+                member.setRegistrationDate(rs.getDate("registration_date"));
+                member.setPassword(rs.getString("password"));
+
+                // we now have a completed member
+                members.add(member);
             }
 
-            return null;
-        } catch (SQLException e){
+            return members;
+
+        } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
@@ -59,6 +83,31 @@ public class MemberDao implements Crudable<Member> {
 
     @Override
     public Member findById(String id) {
+        try(Connection conn = ConnectionFactory.getConnectionFactory().getConnection()){
+            String sql = "select * from members where email = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ps.setString(1, id);
+
+            ResultSet rs = ps.executeQuery();
+
+            while(!rs.next()){
+                throw new InvalidUserInputException("Enter information is incorrect for login, please try agian");
+            }
+
+            Member member = new Member();
+
+            member.setEmail(rs.getString("email"));
+            member.setFullName(rs.getString("full_name"));
+            member.setExperienceMonths(rs.getInt("experience_months"));
+            member.setRegistrationDate(rs.getDate("registration_date"));
+            member.setPassword(rs.getString("password"));
+
+            return member;
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -73,6 +122,33 @@ public class MemberDao implements Crudable<Member> {
     }
 
     public Member loginCredentialCheck(String email, String password) {
+
+        try(Connection conn = ConnectionFactory.getConnectionFactory().getConnection()){
+            String sql = "select * from members where email = ? and password = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ps.setString(1, email);
+            ps.setString(2, password);
+
+            ResultSet rs = ps.executeQuery();
+
+            while(!rs.next()){
+             throw new InvalidUserInputException("Enter information is incorrect for login, please try agian");
+            }
+
+            Member member = new Member();
+
+            member.setEmail(rs.getString("email"));
+            member.setFullName(rs.getString("full_name"));
+            member.setExperienceMonths(rs.getInt("experience_months"));
+            member.setRegistrationDate(rs.getDate("registration_date"));
+            member.setPassword(rs.getString("password"));
+
+            return member;
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
         return null;
     }
 }
