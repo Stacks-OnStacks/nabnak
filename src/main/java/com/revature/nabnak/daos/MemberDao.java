@@ -132,7 +132,7 @@ public class MemberDao implements Crudable<Member> {
 
             ResultSet rs = ps.executeQuery();
 
-            while(!rs.next()){
+            if(!rs.next()){
              throw new InvalidUserInputException("Enter information is incorrect for login, please try agian");
             }
 
