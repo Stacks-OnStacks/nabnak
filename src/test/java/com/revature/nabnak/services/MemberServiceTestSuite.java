@@ -1,11 +1,11 @@
 package com.revature.nabnak.services;
 
-import com.revature.nabnak.daos.MemberDao;
-import com.revature.nabnak.models.Member;
+import com.revature.nabnak.member.MemberDao;
+import com.revature.nabnak.member.Member;
+import com.revature.nabnak.member.MemberService;
 import com.revature.nabnak.util.CustomCollections.LinkedList;
 import com.revature.nabnak.util.CustomCollections.List;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

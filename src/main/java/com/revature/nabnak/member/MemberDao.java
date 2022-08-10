@@ -1,6 +1,6 @@
-package com.revature.nabnak.daos;
+package com.revature.nabnak.member;
 
-import com.revature.nabnak.models.Member;
+import com.revature.nabnak.util.interfaces.Crudable;
 import com.revature.nabnak.util.ConnectionFactory;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;

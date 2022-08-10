@@ -1,4 +1,4 @@
-package com.revature.nabnak.daos;
+package com.revature.nabnak.util.interfaces;
 
 
 import java.util.List;

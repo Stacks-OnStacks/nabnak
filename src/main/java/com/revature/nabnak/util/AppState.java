@@ -1,10 +1,7 @@
 package com.revature.nabnak.util;
 
-import com.revature.nabnak.daos.MemberDao;
-import com.revature.nabnak.services.MemberService;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import com.revature.nabnak.member.MemberDao;
+import com.revature.nabnak.member.MemberService;
 
 public class AppState {
 

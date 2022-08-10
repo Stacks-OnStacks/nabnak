@@ -1,7 +1,6 @@
-package com.revature.nabnak.services;
+package com.revature.nabnak.card;
 
-import com.revature.nabnak.daos.CardDao;
-import com.revature.nabnak.models.Card;
+import com.revature.nabnak.member.MemberService;
 
 import java.util.List;
 

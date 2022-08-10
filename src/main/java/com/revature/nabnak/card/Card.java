@@ -1,4 +1,4 @@
-package com.revature.nabnak.models;
+package com.revature.nabnak.card;
 
 public class Card {
     // Attributes

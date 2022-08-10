@@ -1,7 +1,5 @@
-package com.revature.nabnak.services;
+package com.revature.nabnak.member;
 
-import com.revature.nabnak.daos.MemberDao;
-import com.revature.nabnak.models.Member;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
 
