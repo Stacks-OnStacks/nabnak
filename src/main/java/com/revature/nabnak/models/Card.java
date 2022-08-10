@@ -2,14 +2,14 @@ package com.revature.nabnak.models;
 
 public class Card {
     // Attributes
-    private String cardId;
+    private int cardId;
     private String description;
     private int points;
     private String tech;
-    private int status;
+    private String status;
     private String memberEmail;
 
-    public Card(String cardId, String description, int points, String tech, int status, String memberEmail) {
+    public Card(int cardId, String description, int points, String tech, String status, String memberEmail) {
         this.cardId = cardId;
         this.description = description;
         this.points = points;
@@ -22,11 +22,11 @@ public class Card {
     }
 
 
-    public String getCardId() {
+    public int getCardId() {
         return cardId;
     }
 
-    public void setCardId(String cardId) {
+    public void setCardId(int cardId) {
         this.cardId = cardId;
     }
 
@@ -54,11 +54,11 @@ public class Card {
         this.tech = tech;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
