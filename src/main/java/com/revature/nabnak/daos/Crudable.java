@@ -1,6 +1,7 @@
 package com.revature.nabnak.daos;
 
-import com.revature.nabnak.util.CustomCollections.List;
+
+import java.util.List;
 
 public interface Crudable<T> { // generic <T> we can use to assign as
     // Generics help insure type saftey

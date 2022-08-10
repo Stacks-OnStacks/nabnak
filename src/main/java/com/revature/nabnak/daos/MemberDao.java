@@ -2,18 +2,16 @@ package com.revature.nabnak.daos;
 
 import com.revature.nabnak.models.Member;
 import com.revature.nabnak.util.ConnectionFactory;
-import com.revature.nabnak.util.CustomCollections.LinkedList;
-import com.revature.nabnak.util.CustomCollections.List;
-import com.revature.nabnak.util.CustomLogger;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
 
-import java.io.*;
+
 import java.sql.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class MemberDao implements Crudable<Member> {
 
-    CustomLogger customLogger = CustomLogger.getLogger(true);
 
 
     @Override

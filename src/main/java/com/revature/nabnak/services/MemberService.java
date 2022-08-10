@@ -2,16 +2,14 @@ package com.revature.nabnak.services;
 
 import com.revature.nabnak.daos.MemberDao;
 import com.revature.nabnak.models.Member;
-import com.revature.nabnak.util.CustomCollections.List;
-import com.revature.nabnak.util.CustomLogger;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
 
-import java.io.*;
+import java.util.List;
 
 public class MemberService {
     // Attributes
-    CustomLogger customLogger = CustomLogger.getLogger(true); // same exact instance of the logger being pull in the menus
+
     private final MemberDao memberDao;
     private Member sessionMember = null;
 
@@ -37,13 +35,10 @@ public class MemberService {
 
         } catch (InvalidUserInputException | ResourcePersistanceException e) {
             // TODO: NEW READ ME (Lines 38-41)
-            customLogger.warn(e.getMessage());
             return null;
         } catch (RuntimeException e){
-            customLogger.warn(e.getMessage());
             return null;
         } catch (Exception e) {
-            customLogger.warn(e.getMessage());
             return null;
         }
     }

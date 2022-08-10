@@ -2,7 +2,8 @@ package com.revature.nabnak.services;
 
 import com.revature.nabnak.daos.CardDao;
 import com.revature.nabnak.models.Card;
-import com.revature.nabnak.util.CustomCollections.List;
+
+import java.util.List;
 
 public class CardService {
 
