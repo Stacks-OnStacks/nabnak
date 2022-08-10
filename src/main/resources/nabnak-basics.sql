@@ -69,7 +69,7 @@ set email = 'cj@mail.com', full_name = 'Charles Jester', experience_months = 18,
 where email = 'cj@mail.com'; -- complete update 
 
 -- Delete some data
-delete from members where email = 'bp@mail.com'; -- delete by id
+delete from members where email = 'valid'; -- delete by id
 delete from card where status = 'Completed'; -- delete by status
 
 

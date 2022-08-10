@@ -112,13 +112,63 @@ public class MemberDao implements Crudable<Member> {
     }
 
     @Override
-    public boolean update(Member updatedObject) {
-        return false;
+    public boolean update(Member updatedMember) {
+        try (Connection conn = ConnectionFactory.getConnectionFactory().getConnection()){
+            String sql = "update members set email = ?, password = ? , full_name = ? , experience_months = ? , registration_date = ? where email = ?"; // we want to set up for a preparedStatement (this prevents SQL injection)
+
+            // ; drop table members will be prevented
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            // our ps now needs to be adjusted with the appropriate values instead of the ?
+            ps.setString(1, updatedMember.getEmail());
+            ps.setString(2, updatedMember.getPassword());
+            ps.setString(3, updatedMember.getFullName());
+            ps.setInt(4, updatedMember.getExperienceMonths());
+            ps.setDate(5, updatedMember.getRegistrationDate());
+            ps.setString(6, updatedMember.getEmail());
+
+            // at this point it's a full sql statement with values where ? are
+
+            int checkInsert = ps.executeUpdate(); // INSERT, UPDATE or DELETE
+
+            if(checkInsert == 0){
+                throw new ResourcePersistanceException("Member was not entered into the database.");
+            }
+
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
-    public boolean delete(String id) {
-        return false;
+    public boolean delete(String email) {
+        try (Connection conn = ConnectionFactory.getConnectionFactory().getConnection()){
+            String sql = "delete from members where email = ?"; // we want to set up for a preparedStatement (this prevents SQL injection)
+
+            // ; drop table members will be prevented
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            // our ps now needs to be adjusted with the appropriate values instead of the ?
+            ps.setString(1, email);
+
+
+            // at this point it's a full sql statement with values where ? are
+
+            int checkInsert = ps.executeUpdate(); // INSERT, UPDATE or DELETE
+
+            if(checkInsert == 0){
+                throw new ResourcePersistanceException("Member was not entered into the database.");
+            }
+
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public Member loginCredentialCheck(String email, String password) {
