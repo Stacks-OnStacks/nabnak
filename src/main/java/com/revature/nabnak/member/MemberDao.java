@@ -7,6 +7,7 @@ import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
 
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class MemberDao implements Crudable<Member> {
     public List<Member> findAll() {
 
         try (Connection conn = ConnectionFactory.getConnectionFactory().getConnection()){
-            List<Member> members = new LinkedList<>();
+            List<Member> members = new ArrayList<>();
 
 
             String sql = "select * from members"; // sql string should always be a sql statement

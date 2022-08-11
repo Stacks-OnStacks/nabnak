@@ -53,6 +53,10 @@ public class MemberService {
         return members;
     }
 
+    public Member findById(String email){
+        return memberDao.findById(email);
+    }
+
     public boolean isMemberValid(Member newMember){
         if(newMember == null) return false;
         // this || is the expression to signify to the conditional that if either of these are true then perform the action

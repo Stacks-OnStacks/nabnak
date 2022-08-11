@@ -1,4 +1,4 @@
-package com.revature.nabnak.util;
+package com.revature.nabnak.util.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
