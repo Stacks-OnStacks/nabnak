@@ -1,5 +1,7 @@
 package com.revature.nabnak.member;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.sql.Date;
 
 public class Member { // classes are simply blueprints for that object
@@ -16,6 +18,7 @@ public class Member { // classes are simply blueprints for that object
     private String fullName;
     private int experienceMonths;
     private Date registrationDate;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // Jackson will not convert this attribute into the JSON when parsed and responding to a request
     private String password; // access modifier private privatizes the variable to only be accessible by the class
 
     // Constructor
