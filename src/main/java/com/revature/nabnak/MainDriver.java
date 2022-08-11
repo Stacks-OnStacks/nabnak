@@ -4,13 +4,15 @@ package com.revature.nabnak;
     The goal is to allow members to join the application, be assigned part of a team and shard their kanban cards.
 */
 
-import com.revature.nabnak.util.AppState;
+import com.revature.nabnak.util.ServletContext;
+
 public class MainDriver {
 
 
     public static void main(String[] args) {
 
-        AppState appState = new AppState();
+        ServletContext servletContext = new ServletContext();
+        servletContext.run();
 
     }
 
