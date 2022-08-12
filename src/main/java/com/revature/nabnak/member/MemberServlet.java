@@ -1,6 +1,9 @@
 package com.revature.nabnak.member;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.nabnak.util.exceptions.InvalidUserInputException;
+import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
+import com.revature.nabnak.util.interfaces.Authable;
 import com.revature.nabnak.util.web.DTO.LoginCreds;
 
 import javax.servlet.ServletException;
@@ -9,10 +12,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 //@WebServlet("/member")
-public class MemberServlet extends HttpServlet {
+public class MemberServlet extends HttpServlet implements Authable {
+
     private final MemberService memberService;
     private final ObjectMapper objectMapper;
 
@@ -49,6 +55,7 @@ public class MemberServlet extends HttpServlet {
 
             resp.getWriter().write(payloadID);
         } else {
+           if(!checkAuth(req,resp)) return;
             List<Member> members = memberService.readAll();
 
             String payload = objectMapper.writeValueAsString(members); // mapper parsing from Java Object to JSON
@@ -65,7 +72,56 @@ public class MemberServlet extends HttpServlet {
 //        Member member = memberService.login(loginCreds.getEmail(), loginCreds.getPassword());
 //
 //        resp.getWriter().write("Welcome back to nabnak " + member.getFullName());
+        Member member = objectMapper.readValue(req.getInputStream(), Member.class);
 
+        // what can we leverage to record our current date
+        member.setRegistrationDate(new Date(System.currentTimeMillis()));
+
+        try {
+            Member newMember = memberService.registerMember(member);
+
+            String payload = objectMapper.writeValueAsString(newMember);
+
+            resp.getWriter().write(payload);
+            resp.setStatus(201);
+        } catch (InvalidUserInputException | ResourcePersistanceException e){
+            resp.getWriter().write(e.getMessage());
+            resp.setStatus(404);
+        } catch (Exception e){
+            resp.getWriter().write(e.getMessage() + " " + e.getClass().getName());
+            resp.setStatus(500);
+        }
 
     }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Member member = objectMapper.readValue(req.getInputStream(), Member.class);
+
+        try {
+            memberService.update(member);
+            resp.getWriter().write("Member has been successfully updated");
+        } catch (InvalidUserInputException e){
+            resp.getWriter().write(e.getMessage());
+            resp.setStatus(404);
+        } catch (Exception e){
+            resp.getWriter().write(e.getMessage() + " " + e.getClass().getName());
+            resp.setStatus(500);
+        }
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if(!checkAuth(req, resp)) return;
+        String email = req.getParameter("email");
+        if(email != null){
+            memberService.remove(email);
+            resp.getWriter().write("Member with " + email + " has been deleted");
+        } else {
+            resp.getWriter().write("This request requires an email parameter in the path ?email=example@mail.com");
+            resp.setStatus(400);
+        }
+    }
+
+
 }

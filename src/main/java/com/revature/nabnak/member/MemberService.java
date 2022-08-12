@@ -16,8 +16,7 @@ public class MemberService {
         this.memberDao = memberDao;
     }
     // Methods
-    public Member registerMember(Member newMember) {
-        try {
+    public Member registerMember(Member newMember) throws InvalidUserInputException, ResourcePersistanceException{
 
             if (!isMemberValid(newMember)) {
                 throw new InvalidUserInputException("User input was invalid");
@@ -31,14 +30,6 @@ public class MemberService {
 
             return newMember;
 
-        } catch (InvalidUserInputException | ResourcePersistanceException e) {
-            // TODO: NEW READ ME (Lines 38-41)
-            return null;
-        } catch (RuntimeException e){
-            return null;
-        } catch (Exception e) {
-            return null;
-        }
     }
     // TODO: NEW READ ME (Lines 43-73)
     public Member login(String email, String password){
@@ -78,6 +69,16 @@ public class MemberService {
             }
         }
         return true;
+    }
+
+    public boolean remove(String email){
+        return memberDao.delete(email);
+    }
+    public boolean update(Member updatedMember) throws InvalidUserInputException{
+        if(!isMemberValid(updatedMember)){
+            throw new InvalidUserInputException("Information provided in the updated member does not meet the constraints of the program.");
+        }
+        return memberDao.update(updatedMember);
     }
 
     public Member getSessionMember(){

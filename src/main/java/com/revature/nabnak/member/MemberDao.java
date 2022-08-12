@@ -113,7 +113,7 @@ public class MemberDao implements Crudable<Member> {
     @Override
     public boolean update(Member updatedMember) {
         try (Connection conn = ConnectionFactory.getConnectionFactory().getConnection()){
-            String sql = "update members set email = ?, password = ? , full_name = ? , experience_months = ? , registration_date = ? where email = ?"; // we want to set up for a preparedStatement (this prevents SQL injection)
+            String sql = "update members set email = ?, password = ? , full_name = ? , experience_months = ? where email = ?"; // we want to set up for a preparedStatement (this prevents SQL injection)
 
             // ; drop table members will be prevented
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -123,8 +123,7 @@ public class MemberDao implements Crudable<Member> {
             ps.setString(2, updatedMember.getPassword());
             ps.setString(3, updatedMember.getFullName());
             ps.setInt(4, updatedMember.getExperienceMonths());
-            ps.setDate(5, updatedMember.getRegistrationDate());
-            ps.setString(6, updatedMember.getEmail());
+            ps.setString(5, updatedMember.getEmail());
 
             // at this point it's a full sql statement with values where ? are
 

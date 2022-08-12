@@ -3,13 +3,12 @@ package com.revature.nabnak.services;
 import com.revature.nabnak.member.MemberDao;
 import com.revature.nabnak.member.Member;
 import com.revature.nabnak.member.MemberService;
-import com.revature.nabnak.util.CustomCollections.LinkedList;
-import com.revature.nabnak.util.CustomCollections.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Date;
+import java.util.LinkedList;
 
 import static org.mockito.Mockito.*;
 
@@ -71,8 +70,10 @@ public class MemberServiceTestSuite {
     @Test
     public void test_login_returnsMember_givenValidLoginCredentials(){
         // Arrange
-        String email = "cj@mail.com";
-        String password = "pass";
+        String email = "ar@mail.com";
+        String password = "gatorFan";
+
+        when(mockMemberDao.loginCredentialCheck(email,password)).thenReturn(new Member());
 
         //Act
         Member actualMember = sut.login(email, password);
@@ -86,7 +87,7 @@ public class MemberServiceTestSuite {
         Member validMember = new Member("valid", "valid", 12, new Date(2022,8,05), "valid");
 
         // when mocking we need to do a when/then for any DAO call
-        when(mockMemberDao.findAll()).thenReturn(new LinkedList<Member>());
+        when(mockMemberDao.findAll()).thenReturn(new LinkedList<>());
         when(mockMemberDao.create(validMember)).thenReturn(validMember);
 
         Member actualNewMember = sut.registerMember(validMember);
