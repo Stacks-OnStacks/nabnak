@@ -4,6 +4,8 @@ import com.revature.nabnak.util.interfaces.Crudable;
 import com.revature.nabnak.util.ConnectionFactory;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 import java.sql.*;
@@ -13,10 +15,11 @@ import java.util.List;
 
 public class MemberDao implements Crudable<Member> {
 
-
+    private final Logger logger = LogManager.getLogger();
 
     @Override
     public Member create(Member newMember) {
+        logger.info("User decided to create a new entry and register with {}", newMember);
         try (Connection conn = ConnectionFactory.getConnectionFactory().getConnection()){
             String sql = "insert into members (email, password, full_name, experience_months, registration_date) values (?,?,?,?,?)"; // we want to set up for a preparedStatement (this prevents SQL injection)
 
@@ -37,6 +40,7 @@ public class MemberDao implements Crudable<Member> {
             if(checkInsert == 0){
                 throw new ResourcePersistanceException("Member was not entered into the database.");
             }
+            logger.info("User has successfully created a new entry with {}", newMember);
 
             return newMember;
 

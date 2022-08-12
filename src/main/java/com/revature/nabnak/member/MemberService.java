@@ -2,6 +2,8 @@ package com.revature.nabnak.member;
 
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
@@ -10,6 +12,7 @@ public class MemberService {
 
     private final MemberDao memberDao;
     private Member sessionMember = null;
+    private final Logger logger = LogManager.getLogger();
 
     // CONSTRUCTOR
     public MemberService(MemberDao memberDao){
@@ -18,6 +21,7 @@ public class MemberService {
     // Methods
     public Member registerMember(Member newMember) throws InvalidUserInputException, ResourcePersistanceException{
 
+            logger.info("Member registration service has begun with the provide: {}", newMember);
             if (!isMemberValid(newMember)) {
                 throw new InvalidUserInputException("User input was invalid");
             }

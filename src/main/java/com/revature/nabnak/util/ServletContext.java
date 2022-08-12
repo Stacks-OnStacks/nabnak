@@ -48,6 +48,7 @@ public class ServletContext {
                 tomcat.addServlet("", "AuthServlet", new AuthServlet(memberService, objectMapper));
                 standardContext.addServletMappingDecoded("/auth", "AuthServlet");
 
+
                 tomcat.start(); // there is a default port on your computer for testing, 8080 this is a "developers port"
                 tomcat.getServer().await();
 

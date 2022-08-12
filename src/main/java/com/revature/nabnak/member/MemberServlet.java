@@ -5,6 +5,8 @@ import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
 import com.revature.nabnak.util.interfaces.Authable;
 import com.revature.nabnak.util.web.DTO.LoginCreds;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,15 +14,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.logging.Level;
 
 //@WebServlet("/member")
 public class MemberServlet extends HttpServlet implements Authable {
 
     private final MemberService memberService;
     private final ObjectMapper objectMapper;
+    //private final Logger logger = Logger.getLogger(MemberServlet.class.getName());
+    private final Logger logger = LogManager.getLogger();
 
     // Because we are perfoming dependency injection, we can no longer use the @WebServlet above. DONT FORGET
     public MemberServlet(MemberService memberService, ObjectMapper objectMapper){
@@ -35,11 +41,8 @@ public class MemberServlet extends HttpServlet implements Authable {
         String email = req.getParameter("email"); // every parameter is read as a STRING
         Member authMember = (Member) req.getSession().getAttribute("authMember"); // cast the returned object to a member
 
-        if(authMember != null) {
-            System.out.println(authMember.getEmail() + " " + authMember.getFullName());
-        } else {
-            resp.setStatus(403); // hello status codes
-        }
+
+
 
         // qwhen using query params and specifying endpoints to hit parituclar crud operations, make sure you go from most specific to least
 //        if (email != null && password != null){ // this has security risks with ap assword in a url
@@ -48,12 +51,20 @@ public class MemberServlet extends HttpServlet implements Authable {
 //            resp.getWriter().write(payload);
 //        } else
         if(email != null) {
+            logger.info("Email entered {}", email);
+            try {
+                Member member = memberService.findById(email);
 
-            Member member = memberService.findById(email);
+                String payloadID = objectMapper.writeValueAsString(member);
 
-            String payloadID = objectMapper.writeValueAsString(member);
-
-            resp.getWriter().write(payloadID);
+                resp.getWriter().write(payloadID);
+                // resp.sendRedirect("https://www.amazon.com");
+                resp.sendRedirect("/"); // this will redirect you to your homepage (index.html)
+            } catch (InvalidUserInputException e){
+                logger.warn("User information entered was not reflective of any member in the databse. Email provided was: {}", email);
+                resp.getWriter().write("Email entered was not found in the database");
+                resp.setStatus(404);
+            }
         } else {
            if(!checkAuth(req,resp)) return;
             List<Member> members = memberService.readAll();
@@ -72,23 +83,27 @@ public class MemberServlet extends HttpServlet implements Authable {
 //        Member member = memberService.login(loginCreds.getEmail(), loginCreds.getPassword());
 //
 //        resp.getWriter().write("Welcome back to nabnak " + member.getFullName());
+        PrintWriter respWriter = resp.getWriter(); // preference play, lot of folks enjoy this
         Member member = objectMapper.readValue(req.getInputStream(), Member.class);
 
         // what can we leverage to record our current date
         member.setRegistrationDate(new Date(System.currentTimeMillis()));
 
         try {
+            logger.info("User has request to add the following to the database {}", member);
             Member newMember = memberService.registerMember(member);
 
             String payload = objectMapper.writeValueAsString(newMember);
 
-            resp.getWriter().write(payload);
+            respWriter.write(payload);
             resp.setStatus(201);
         } catch (InvalidUserInputException | ResourcePersistanceException e){
-            resp.getWriter().write(e.getMessage());
+            logger.warn("Exception thrown when trying to persist. Message from exception: {}", e.getMessage());
+            respWriter.write(e.getMessage());
             resp.setStatus(404);
         } catch (Exception e){
-            resp.getWriter().write(e.getMessage() + " " + e.getClass().getName());
+            logger.error("Something unexpected happened and this exception was thrown: {} with message: {}", e.getClass().getName(), e.getMessage());
+            respWriter.write(e.getMessage() + " " + e.getClass().getName());
             resp.setStatus(500);
         }
 
