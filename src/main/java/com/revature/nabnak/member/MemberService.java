@@ -49,7 +49,9 @@ public class MemberService {
     }
 
     public Member findById(String email){
-        return memberDao.findById(email);
+
+        Member member =memberDao.findById(email);
+        return member;
     }
 
     public boolean isMemberValid(Member newMember){
@@ -72,6 +74,11 @@ public class MemberService {
         return memberDao.delete(email);
     }
     public boolean update(Member updatedMember) throws InvalidUserInputException{
+
+        // NOTE THIS ADDITONAL STEP TO FIND REGISTRATION DATE
+        Member member = memberDao.findById(updatedMember.getEmail());
+        updatedMember.setRegistrationDate(member.getRegistrationDate());
+
         if(!isMemberValid(updatedMember)){
             throw new InvalidUserInputException("Information provided in the updated member does not meet the constraints of the program.");
         }

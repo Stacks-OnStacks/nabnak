@@ -58,8 +58,6 @@ public class MemberServlet extends HttpServlet implements Authable {
                 String payloadID = objectMapper.writeValueAsString(member);
 
                 resp.getWriter().write(payloadID);
-                // resp.sendRedirect("https://www.amazon.com");
-                resp.sendRedirect("/"); // this will redirect you to your homepage (index.html)
             } catch (InvalidUserInputException e){
                 logger.warn("User information entered was not reflective of any member in the databse. Email provided was: {}", email);
                 resp.getWriter().write("Email entered was not found in the database");
