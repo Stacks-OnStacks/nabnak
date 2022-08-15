@@ -4,8 +4,11 @@ import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.*;
 import java.sql.Date;
 
+@Entity
+@Table(name="members")
 public class Member { // classes are simply blueprints for that object
 
     // Objects - instances of a class in memory
@@ -16,9 +19,13 @@ public class Member { // classes are simply blueprints for that object
     // 3. Methods
 
     // Attributes
+    @Id
     private String email;
+    @Column(name="full_name")
     private String fullName;
+    @Column(name="experience_months")
     private int experienceMonths;
+    @Column(name = "registration_date")
     private Date registrationDate;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // Jackson will not convert this attribute into the JSON when parsed and responding to a request
     @JsonAlias(value = {"Password", "pass", "theThing"}) // this allows for any key in the JSON that matches in the String array to be used for password

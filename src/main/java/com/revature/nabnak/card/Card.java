@@ -1,7 +1,14 @@
 package com.revature.nabnak.card;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="cards")
 public class Card {
     // Attributes
+    @Id
     private int cardId;
     private String description;
     private int points;

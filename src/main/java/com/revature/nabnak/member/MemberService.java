@@ -65,14 +65,7 @@ public class MemberService {
 
     // TODO: IMPLEMENT MEEEEEEE!!!!!!!
     public boolean isEmailAvailable(String email){
-        List<Member> members = readAll();
-        for(int i = 0; i < members.size(); i++){
-            if(members.get(i) == null) break;
-            if(members.get(i).getEmail().equals(email)){
-                return false;
-            }
-        }
-        return true;
+        return memberDao.checkEmail(email);
     }
 
     public boolean remove(String email){

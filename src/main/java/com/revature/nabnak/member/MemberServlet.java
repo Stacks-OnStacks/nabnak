@@ -66,7 +66,6 @@ public class MemberServlet extends HttpServlet implements Authable {
                 resp.setStatus(404);
             }
         } else {
-           if(!checkAuth(req,resp)) return;
             List<Member> members = memberService.readAll();
 
             String payload = objectMapper.writeValueAsString(members); // mapper parsing from Java Object to JSON
