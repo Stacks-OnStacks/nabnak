@@ -10,6 +10,9 @@ import java.sql.Date;
 @Table(name="members")
 public class Member {
     @Id
+    private String id;
+
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(name="full_name")
@@ -29,14 +32,16 @@ public class Member {
         super();
     }
 
-    public Member(String email, String fullName, int experienceMonths, Date registrationDate){
+    public Member(String email, String fullName, int experienceMonths, Date registrationDate, String password) {
         this.email = email;
         this.fullName = fullName;
         this.experienceMonths = experienceMonths;
         this.registrationDate = registrationDate;
+        this.password = password;
     }
 
-    public Member(String email, String fullName, int experienceMonths, Date registrationDate, String password){
+    public Member(String id, String email, String fullName, int experienceMonths, Date registrationDate, String password) {
+        this.id = id;
         this.email = email;
         this.fullName = fullName;
         this.experienceMonths = experienceMonths;
@@ -84,13 +89,22 @@ public class Member {
         return password;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Member{" +
-                "email='" + email + '\'' +
+                "id='" + id + '\'' +
+                ", email='" + email + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", experienceMonths=" + experienceMonths +
-                ", registrationDate='" + registrationDate + '\'' +
+                ", registrationDate=" + registrationDate +
                 '}';
     }
 }

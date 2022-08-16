@@ -122,8 +122,8 @@ public class MemberDao implements Crudable<Member> {
             query.setParameter("email", email);
             Member member = (Member) query.uniqueResult();
             transaction.commit();
-            if(member == null) return false;
-            return true;
+            if(member == null) return true;
+            return false;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return false;

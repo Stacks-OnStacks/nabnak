@@ -1,10 +1,12 @@
 package com.revature.nabnak.member;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.nabnak.member.dto.requests.EditMemberRequest;
+import com.revature.nabnak.member.dto.requests.NewRegistrationRequest;
+import com.revature.nabnak.member.dto.response.MemberResponse;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
 import com.revature.nabnak.util.interfaces.Authable;
-import com.revature.nabnak.util.web.DTO.LoginCreds;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,13 +14,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Date;
-import java.time.LocalDate;
 import java.util.List;
-import java.util.logging.Level;
 
 //@WebServlet("/member")
 public class MemberServlet extends HttpServlet implements Authable {
@@ -53,7 +51,7 @@ public class MemberServlet extends HttpServlet implements Authable {
         if(email != null) {
             logger.info("Email entered {}", email);
             try {
-                Member member = memberService.findById(email);
+                MemberResponse member = memberService.findById(email);
 
                 String payloadID = objectMapper.writeValueAsString(member);
 
@@ -64,7 +62,7 @@ public class MemberServlet extends HttpServlet implements Authable {
                 resp.setStatus(404);
             }
         } else {
-            List<Member> members = memberService.readAll();
+            List<MemberResponse> members = memberService.readAll();
 
             String payload = objectMapper.writeValueAsString(members); // mapper parsing from Java Object to JSON
 
@@ -81,14 +79,12 @@ public class MemberServlet extends HttpServlet implements Authable {
 //
 //        resp.getWriter().write("Welcome back to nabnak " + member.getFullName());
         PrintWriter respWriter = resp.getWriter(); // preference play, lot of folks enjoy this
-        Member member = objectMapper.readValue(req.getInputStream(), Member.class);
+        NewRegistrationRequest member = objectMapper.readValue(req.getInputStream(), NewRegistrationRequest.class);
 
-        // what can we leverage to record our current date
-        member.setRegistrationDate(new Date(System.currentTimeMillis()));
 
         try {
             logger.info("User has request to add the following to the database {}", member);
-            Member newMember = memberService.registerMember(member);
+            MemberResponse newMember = memberService.registerMember(member);
 
             String payload = objectMapper.writeValueAsString(newMember);
 
@@ -108,10 +104,10 @@ public class MemberServlet extends HttpServlet implements Authable {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Member member = objectMapper.readValue(req.getInputStream(), Member.class);
+        EditMemberRequest editMember = objectMapper.readValue(req.getInputStream(), EditMemberRequest.class);
 
         try {
-            memberService.update(member);
+            memberService.update(editMember);
             resp.getWriter().write("Member has been successfully updated");
         } catch (InvalidUserInputException e){
             resp.getWriter().write(e.getMessage());
