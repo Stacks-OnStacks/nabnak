@@ -1,8 +1,11 @@
 package com.revature.nabnak.card;
 
+import com.revature.nabnak.card.dto.requests.NewCardRequest;
+import com.revature.nabnak.card.dto.responses.CardResponse;
 import com.revature.nabnak.member.MemberService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CardService {
 
@@ -20,16 +23,23 @@ public class CardService {
          return false;
      }
 
-     public Card addCard(Card newCard){
-        return cardDao.create(newCard);
+     public CardResponse addCard(NewCardRequest cardRequest){
+
+        Card newCard = new Card(cardRequest, memberService.getSessionMember());
+
+        return new CardResponse(cardDao.create(newCard));
      }
 
-     public List<Card> findAllCards(){
-        return cardDao.findAll();
+     public List<CardResponse> findAllCards(){
+        return cardDao.findAll().stream().map(CardResponse::new).collect(Collectors.toList());
      }
 
      public List<Card> findAllCardsByMember(String email){
         return cardDao.findAllByUser(email);
+     }
+
+     public Card findCardById(String id){
+        return cardDao.findById(id);
      }
 
      public Card update(Card updatedCard){

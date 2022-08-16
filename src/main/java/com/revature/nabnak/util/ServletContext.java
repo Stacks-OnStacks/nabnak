@@ -1,6 +1,9 @@
 package com.revature.nabnak.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.nabnak.card.CardDao;
+import com.revature.nabnak.card.CardService;
+import com.revature.nabnak.card.CardServlet;
 import com.revature.nabnak.member.MemberDao;
 import com.revature.nabnak.member.MemberService;
 import com.revature.nabnak.member.MemberServlet;
@@ -37,6 +40,8 @@ public class ServletContext {
                 MemberDao memberDao = new MemberDao();
                 MemberService memberService = new MemberService(memberDao);
                 ObjectMapper objectMapper = new ObjectMapper();
+                CardDao cardDao = new CardDao();
+                CardService cardService = new CardService(memberService, cardDao);
 
                // tomcat.setPort(3000); // Do not change port from 8080, leave default. This is just to show you can alter the ports. BEcause certain cloud providers sometimes change their ports. they use just 80 or 8080
 
@@ -48,6 +53,8 @@ public class ServletContext {
                 tomcat.addServlet("", "AuthServlet", new AuthServlet(memberService, objectMapper));
                 standardContext.addServletMappingDecoded("/auth", "AuthServlet");
 
+                tomcat.addServlet("", "CardServlet", new CardServlet(objectMapper,cardService));
+                standardContext.addServletMappingDecoded("/card", "CardServlet");
 
                 tomcat.start(); // there is a default port on your computer for testing, 8080 this is a "developers port"
                 tomcat.getServer().await();

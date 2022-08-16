@@ -1,33 +1,54 @@
 package com.revature.nabnak.card;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.revature.nabnak.card.dto.requests.NewCardRequest;
+import com.revature.nabnak.member.Member;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="card")
 public class Card {
     // Attributes
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "card_id")
     private int cardId;
     private String description;
     private int points;
     private String tech;
     private String status;
-    private String memberEmail;
 
-    public Card(int cardId, String description, int points, String tech, String status, String memberEmail) {
+    @ManyToOne
+    @JoinColumn(name="member_id", nullable = false)
+    private Member memberId;
+
+    public Card(String description, int points, String tech, String status, Member memberId) {
+        this.description = description;
+        this.points = points;
+        this.tech = tech;
+        this.status = status;
+        this.memberId = memberId;
+    }
+
+    public Card(int cardId, String description, int points, String tech, String status, Member memberId) {
         this.cardId = cardId;
         this.description = description;
         this.points = points;
         this.tech = tech;
         this.status = status;
-        this.memberEmail = memberEmail;
+        this.memberId = memberId;
+    }
+
+    public Card(NewCardRequest cardRequest, Member member) {
+        this.description = cardRequest.getDescription();
+        this.points = cardRequest.getPoints();
+        this.tech = cardRequest.getTech();
+        this.status = cardRequest.getStatus();
+        this.memberId = member;
     }
 
     public Card() {
     }
-
 
     public int getCardId() {
         return cardId;
@@ -69,23 +90,23 @@ public class Card {
         this.status = status;
     }
 
-    public String getMemberEmail() {
-        return memberEmail;
+    public Member getMemberId() {
+        return memberId;
     }
 
-    public void setMemberEmail(String memberEmail) {
-        this.memberEmail = memberEmail;
+    public void setMemberId(Member memberId) {
+        this.memberId = memberId;
     }
 
     @Override
     public String toString() {
         return "Card{" +
-                "cardId='" + cardId + '\'' +
+                "cardId=" + cardId +
                 ", description='" + description + '\'' +
                 ", points=" + points +
                 ", tech='" + tech + '\'' +
-                ", status=" + status +
-                ", memberEmail='" + memberEmail + '\'' +
+                ", status='" + status + '\'' +
+                ", memberEmail=" + memberId.getEmail() +
                 '}';
     }
 }

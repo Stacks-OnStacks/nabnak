@@ -52,9 +52,10 @@ public class CardDao implements Crudable<Card> {
     @Override
     public Card findById(String id) {
         try {
+            int intId = Integer.parseInt(id);
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-            Card card = session.get(Card.class, id);
+            Card card = session.get(Card.class, intId);
             transaction.commit();
             return card;
         } catch (HibernateException | IOException e) {
