@@ -1,75 +1,48 @@
 package com.revature.nabnak.member;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
 @Table(name="members")
-public class Member { // classes are simply blueprints for that object
-
-    // Objects - instances of a class in memory
-
-    // When making a custom class note you generally have 3 vital sections
-    // 1. Fields/Attributes/State/Data
-    // 2. Constructors (default is a No-Arg Constructor)
-    // 3. Methods
-
-    // Attributes
+public class Member {
     @Id
     private String email;
+
     @Column(name="full_name")
     private String fullName;
+
     @Column(name="experience_months")
     private int experienceMonths;
+
     @Column(name = "registration_date")
     private Date registrationDate;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // Jackson will not convert this attribute into the JSON when parsed and responding to a request
-    @JsonAlias(value = {"Password", "pass", "theThing"}) // this allows for any key in the JSON that matches in the String array to be used for password
-    private String password; // access modifier private privatizes the variable to only be accessible by the class
 
-    // Constructor
-    // Polymorphism - Overloading: that the same method or constructor can take in a variety of arugments and still work
-    // Default no-arg (don't specify if you're not making any custom constructors)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonAlias(value = {"Password", "pass", "theThing"})
+    private String password;
+
     public Member(){
-        super(); //super is the class this is inheriting from
-        // this is due to the root object of class called Object
-        // Object oriented programming comes from this root
-        // Inheritance - Pillar of OOP
-        // this allows any class to extend another class and inherit it's attributes, constructors and methods
-        // All class in java inherit information from the Object class
+        super();
     }
 
     public Member(String email, String fullName, int experienceMonths, Date registrationDate){
-        // email, fullName, etc is only available to the scope of this Constructor. This is known as shadowing.
         this.email = email;
         this.fullName = fullName;
         this.experienceMonths = experienceMonths;
         this.registrationDate = registrationDate;
     }
 
-    // the constructor is requiring 4 parameteres
-    // parameter definition requires the Datatype to proceed tghe variable name, much like declaractor of variable
     public Member(String email, String fullName, int experienceMonths, Date registrationDate, String password){
-        // email, fullName, etc is only available to the scope of this Constructor. This is known as shadowing.
         this.email = email;
         this.fullName = fullName;
         this.experienceMonths = experienceMonths;
         this.registrationDate = registrationDate;
         this.password = password;
     }
-
-    // Methods!!!
-    // public allows all instances of this class to view the method
-    // String is the return datatype
-    // writeToString is the methods name
-
-    // Enscapsulation - this privatizes the variables to prevent random reassignment and hide any important information for users
-
 
     public void setEmail(String email) {
         this.email = email;
@@ -104,20 +77,14 @@ public class Member { // classes are simply blueprints for that object
     }
 
     public void setPassword(String password){
-        this.password = password; // this.password is the value of the classes password where = password is the argument that was provided
+        this.password = password;
     }
 
     public String getPassword(){
-        return password; // this is inside of the scope for the object
+        return password;
     }
 
-    public String writeToFile(){
-        return email + "," + fullName + "," + experienceMonths + "," + registrationDate + "," + password + "\n";
-    }
-
-    // Polymorphism - Overriding section of polymorphism pillar of OOP
-    // means that you're changing the initial method's actions
-    @Override // this is annotation, it's metadata
+    @Override
     public String toString() {
         return "Member{" +
                 "email='" + email + '\'' +
