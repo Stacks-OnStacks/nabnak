@@ -2,8 +2,12 @@ package com.revature.nabnak.card;
 
 import com.revature.nabnak.card.dto.requests.NewCardRequest;
 import com.revature.nabnak.card.dto.responses.CardResponse;
+import com.revature.nabnak.member.Member;
 import com.revature.nabnak.member.MemberService;
+import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +27,11 @@ public class CardService {
          return false;
      }
 
-     public CardResponse addCard(NewCardRequest cardRequest){
+     public CardResponse addCard(NewCardRequest cardRequest) throws InvalidUserInputException{
+
+        areEnumsValid(cardRequest);
+
+       // Member member = memberService.findById(cardRequest.getId());
 
         Card newCard = new Card(cardRequest, memberService.getSessionMember());
 
@@ -49,6 +57,29 @@ public class CardService {
 
      public boolean delete(String id){
         return cardDao.delete(id);
+     }
+
+     public boolean areEnumsValid(NewCardRequest cardRequest) throws InvalidUserInputException{
+        List<String> techEnums = Arrays.asList("JAVA", "JAVASCRIPT", "PYTHON", "RUBY", "GO", "REACT", "TYPESCRIPT", "LUA", "CARBON");
+        List<String> statusEnums = Arrays.asList("OPEN", "INPROGRESS", "CLOSED");
+
+        List<Boolean> checkTechEnums = techEnums.stream().map(str -> str.equals(cardRequest.getTech().toUpperCase())).collect(Collectors.toList());
+        if(!checkTechEnums.contains(true)){
+            throw new InvalidUserInputException(
+                    "Tech was not a valid entry please try the follow : " +
+                    techEnums.stream().map(Object::toString).collect(Collectors.joining(",")) // this will produce all available tech enums
+                    );
+        }
+
+         List<Boolean> checkStatusEnums = statusEnums.stream().map(str -> str.equals(cardRequest.getStatus().toUpperCase())).collect(Collectors.toList());
+         if(!checkStatusEnums.contains(true)){
+             throw  new InvalidUserInputException(
+                     "Status was not a valid entry please try the follow : " +
+                             statusEnums.stream().map(Object::toString).collect(Collectors.joining(",")) // this will produce all available tech enums
+             );
+         }
+        return true;
+
      }
 
 }

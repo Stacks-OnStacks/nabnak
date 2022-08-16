@@ -24,7 +24,6 @@ public class Member {
     @Column(name = "registration_date")
     private Date registrationDate;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @JsonAlias(value = {"Password", "pass", "theThing"})
     private String password;
 

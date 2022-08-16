@@ -15,8 +15,8 @@ public class CardResponse {
         this.cardId = card.getCardId();
         this.description = card.getDescription();
         this.points = card.getPoints();
-        this.status = card.getStatus();
-        this.tech = card.getTech();
+        this.status = card.getStatus().toString();
+        this.tech = card.getTech().toString();
         this.memberEmail = card.getMemberId().getEmail();
     }
 

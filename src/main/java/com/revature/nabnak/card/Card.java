@@ -15,35 +15,23 @@ public class Card {
     private int cardId;
     private String description;
     private int points;
-    private String tech;
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private Tech tech; // Java, java, JaVA, JavA
+
+    @Enumerated(EnumType.STRING)
+    private Status status; // Open, OPEN, open
 
     @ManyToOne
     @JoinColumn(name="member_id", nullable = false)
     private Member memberId;
 
-    public Card(String description, int points, String tech, String status, Member memberId) {
-        this.description = description;
-        this.points = points;
-        this.tech = tech;
-        this.status = status;
-        this.memberId = memberId;
-    }
 
-    public Card(int cardId, String description, int points, String tech, String status, Member memberId) {
-        this.cardId = cardId;
-        this.description = description;
-        this.points = points;
-        this.tech = tech;
-        this.status = status;
-        this.memberId = memberId;
-    }
 
     public Card(NewCardRequest cardRequest, Member member) {
         this.description = cardRequest.getDescription();
         this.points = cardRequest.getPoints();
-        this.tech = cardRequest.getTech();
-        this.status = cardRequest.getStatus();
+        this.tech = Tech.valueOf(cardRequest.getTech().toUpperCase());
+        this.status = Status.valueOf(cardRequest.getStatus().toUpperCase());
         this.memberId = member;
     }
 
@@ -74,19 +62,19 @@ public class Card {
         this.points = points;
     }
 
-    public String getTech() {
+    public Tech getTech() {
         return tech;
     }
 
-    public void setTech(String tech) {
+    public void setTech(Tech tech) {
         this.tech = tech;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
@@ -96,6 +84,14 @@ public class Card {
 
     public void setMemberId(Member memberId) {
         this.memberId = memberId;
+    }
+
+    public enum Tech{
+        JAVA, JAVASCRIPT, PYTHON, RUBY, GO, REACT, TYPESCRIPT, LUA, CARBON
+    }
+
+    public enum Status{
+        OPEN, INPROGRESS, CLOSED
     }
 
     @Override

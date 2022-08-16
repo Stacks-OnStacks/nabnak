@@ -129,12 +129,4 @@ public class MemberService {
         return sessionMember;
     }
 
-    public void logout(){
-        sessionMember = null;
-    }
-
-    public boolean isSessionActive(){
-        return sessionMember != null;
-    }
-
 }
