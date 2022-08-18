@@ -10,7 +10,6 @@ import com.revature.nabnak.util.interfaces.Authable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,7 +32,7 @@ public class MemberServlet extends HttpServlet implements Authable {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         // TODO: Issue of there being more than just a doGet for reading all, things like find a member by ID
         String email = req.getParameter("email"); // every parameter is read as a STRING
@@ -71,7 +70,7 @@ public class MemberServlet extends HttpServlet implements Authable {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         // DO NOT DO LOGIN INSIDE OF YOUR MEMBER SERVLET
 //        LoginCreds loginCreds = objectMapper.readValue(req.getInputStream(), LoginCreds.class); // this provides the body from the request as a JSON, leveraging Reflections
 //
@@ -103,7 +102,7 @@ public class MemberServlet extends HttpServlet implements Authable {
     }
 
     @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         EditMemberRequest editMember = objectMapper.readValue(req.getInputStream(), EditMemberRequest.class);
 
         try {
@@ -119,7 +118,7 @@ public class MemberServlet extends HttpServlet implements Authable {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if(!checkAuth(req, resp)) return;
         String email = req.getParameter("email");
         if(email != null){

@@ -22,7 +22,9 @@ public class ServletContext {
 
 
         public final void run() {
-            // Dependency injection will remain
+            // For Elastic beanstalk deployment
+            new File("src/main/webapp/").mkdirs();
+            new File("target/classes").mkdirs();
 
             String webappDirLocation = new File("src/main/webapp/").getAbsolutePath();
             String additonalClasses = new File("target/classes").getAbsolutePath();
@@ -56,10 +58,11 @@ public class ServletContext {
                 tomcat.addServlet("", "CardServlet", new CardServlet(objectMapper,cardService));
                 standardContext.addServletMappingDecoded("/card", "CardServlet");
 
+                tomcat.setPort(5000);
                 tomcat.start(); // there is a default port on your computer for testing, 8080 this is a "developers port"
                 tomcat.getServer().await();
 
-            } catch (ServletException | LifecycleException e) {
+            } catch (LifecycleException | ServletException e) {
                 throw new RuntimeException(e);
             }
         }

@@ -5,7 +5,6 @@ import com.revature.nabnak.member.Member;
 import com.revature.nabnak.member.MemberService;
 import com.revature.nabnak.util.web.DTO.LoginCreds;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,7 +23,7 @@ public class AuthServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         LoginCreds loginCreds = objectMapper.readValue(req.getInputStream(), LoginCreds.class); // this provides the body from the request as a JSON, leveraging Reflections
 
         Member member = memberService.login(loginCreds.getEmail(), loginCreds.getPassword());
@@ -36,7 +35,7 @@ public class AuthServlet extends HttpServlet {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         req.getSession().invalidate(); // this is how you kill/delete/logout of the session/cookie
         resp.getWriter().write("Member has successfully logged out");
     }

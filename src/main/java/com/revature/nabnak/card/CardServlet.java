@@ -9,7 +9,6 @@ import com.revature.nabnak.util.interfaces.Authable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,7 +29,7 @@ public class CardServlet extends HttpServlet implements Authable {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws  IOException {
         if(!checkAuth(req,resp)) return;
         try {
             NewCardRequest newCardRequest = objectMapper.readValue(req.getInputStream(), NewCardRequest.class);
@@ -46,7 +45,7 @@ public class CardServlet extends HttpServlet implements Authable {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String id = req.getParameter("id");
         if(id != null){
             Card card = cardService.findCardById(id);
