@@ -6,6 +6,7 @@ import com.revature.nabnak.member.dto.response.MemberResponse;
 import com.revature.nabnak.util.exceptions.ResourceNotFoundException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-@RestController // RestController is used so we don't have to repeat 1000 @ResponseBody infront of every return time.
+@RestController // RestController is used so we don't have to repeat 1000 @ResponseBody infront of every return type.
 // We can included the @ResponseBody and it'll work just fine.
 @RequestMapping("/member")
 public class MemberController {
@@ -22,6 +23,7 @@ public class MemberController {
     private final MemberService memberService;
     private final Logger logger = LogManager.getLogger();
 
+    @Autowired
     public MemberController(MemberService memberService){
         this.memberService = memberService;
     }

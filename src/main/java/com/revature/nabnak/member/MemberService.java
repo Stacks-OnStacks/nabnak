@@ -8,6 +8,7 @@ import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
 import com.revature.nabnak.util.exceptions.ResourceNotFoundException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
@@ -16,21 +17,20 @@ import java.util.UUID;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-@Service
+@Service // Any stereotypical annotation in spring (Component, Controller, Service, Repository) they all automatically add @Autowired to the Constructor (requires 1 constructor)
 public class MemberService {
     // Attributes
-
     private final MemberRepository memberRepository;
     private Member sessionMember = null;
     private final Logger logger = LogManager.getLogger();
 
     // CONSTRUCTOR
+    @Autowired // this is defaulty added due to the Service Above
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
     // Methods
     public MemberResponse registerMember(NewRegistrationRequest newRegistration) throws InvalidUserInputException, ResourcePersistanceException{
-
 
             Member newMember = new Member();
 
