@@ -21,7 +21,7 @@ create table card(
 	members_email varchar(20)
 );
 -- drop for card
---drop table card;
+drop table card;
 --
 --
 
@@ -38,11 +38,11 @@ select * from card;
 -- Create some dummy data
 insert into members 
 values
-('cj@mail.com', 'Charles Jester', 18, '2022-01-01', 'pass'),
-('ar@mail.com', 'Adam Ranieri', 2400, '2022-07-06', 'gatorFan'),
-('bp@mail.com', 'Ben Petruzziello', 24, '2022-07-31', 'ooBen'),
-('po@mail.com', 'Patrick Orwin', 12, '2022-07-22', 'notThatPatrick'),
-('ab@mail.com', 'Ashwin Bharath', 180, '2022-06-18', 'coolBoss');
+('cj@mail.com', 18, 'Charles Jester',  'pass', '2022-01-01'),
+('ar@mail.com', 2400, 'Adam Ranieri', 'gatorFan', '2022-07-06'),
+('bp@mail.com', 24, 'Ben Petruzziello', 'ooBen', '2022-07-31'),
+('po@mail.com', 12, 'Patrick Orwin', 'notThatPatrick', '2022-07-22'),
+('ab@mail.com', 180, 'Ashwin Bharath', 'coolBoss', '2022-06-18');
 
 insert into card 
 values
@@ -72,4 +72,7 @@ where email = 'cj@mail.com'; -- complete update
 delete from members where email = 'valid'; -- delete by id
 delete from card where status = 'Completed'; -- delete by status
 
+-- Alter table to remove columns
+alter table members drop column registrationdate;
 
+delete from card where card_id in (1,2)

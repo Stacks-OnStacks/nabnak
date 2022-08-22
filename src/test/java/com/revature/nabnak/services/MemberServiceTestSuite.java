@@ -3,6 +3,8 @@ package com.revature.nabnak.services;
 import com.revature.nabnak.member.MemberDao;
 import com.revature.nabnak.member.Member;
 import com.revature.nabnak.member.MemberService;
+import com.revature.nabnak.member.dto.requests.NewRegistrationRequest;
+import com.revature.nabnak.member.dto.response.MemberResponse;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -84,17 +86,19 @@ public class MemberServiceTestSuite {
 
     @Test
     public void test_registerMember_returnsNewMember_givenValidMember(){
-        Member validMember = new Member("valid", "valid", 12, new Date(2022,8,05), "valid");
+        Member validMember = spy(new Member("valid", "valid", 12, new Date(System.currentTimeMillis()), "valid"));
+        NewRegistrationRequest registrationRequest = spy(new NewRegistrationRequest("valid", "valid", "pass", 12));
+        validMember.setId(registrationRequest.getId());
 
         // when mocking we need to do a when/then for any DAO call
-        when(mockMemberDao.findAll()).thenReturn(new LinkedList<>());
-        when(mockMemberDao.create(validMember)).thenReturn(validMember);
+        when(mockMemberDao.checkEmail(registrationRequest.getEmail())).thenReturn(true);
+        doReturn(validMember).when(mockMemberDao).create(validMember);
 
-//        Member actualNewMember = sut.registerMember(validMember);
+        MemberResponse actualNewMember = sut.registerMember(registrationRequest);
 
-//        Assertions.assertInstanceOf(Member.class, actualNewMember);
+       Assertions.assertInstanceOf(MemberResponse.class, actualNewMember);
         // at the end we need to verify the number of dao calls from this method
-        verify(mockMemberDao, times(1)).create(validMember);
+        verify(mockMemberDao, times(2));
     }
 
 

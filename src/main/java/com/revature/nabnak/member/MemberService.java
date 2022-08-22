@@ -35,8 +35,8 @@ public class MemberService {
             newMember.setFullName(newRegistration.getFullName());
             newMember.setExperienceMonths(newRegistration.getExperienceMonths());
             newMember.setPassword(newRegistration.getPassword());
-            // Java will set these for us
-            newMember.setId(UUID.randomUUID().toString());
+            newMember.setId(newRegistration.getId());
+            // Java will set these for up
             newMember.setRegistrationDate(new Date(System.currentTimeMillis()));
 
             logger.info("Member registration service has begun with the provide: {}", newMember);
@@ -48,7 +48,7 @@ public class MemberService {
                 throw new ResourcePersistanceException("Email is already registered please try logging in.");
             }
 
-            memberDao.create(newMember);
+            newMember = memberDao.create(newMember);
 
             return new MemberResponse(newMember);
 

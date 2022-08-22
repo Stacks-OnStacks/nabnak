@@ -24142,3 +24142,781 @@ org.postgresql.util.PSQLException: ERROR: null value in column "member_id" of re
 [DEBUG] 2022-08-16 23:25:10.278 [http-nio-8080-exec-10] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 [DEBUG] 2022-08-16 23:25:10.278 [http-nio-8080-exec-10] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 [DEBUG] 2022-08-16 23:25:39.546 [Hibernate Connection Pool Validation Thread] DriverManagerConnectionProviderImpl - Connection pool now considered primed; min-size will be maintained
+[INFO ] 2022-08-19 14:40:41.663 [main] MemberService - Member registration service has begun with the provide: Member{id='027db3eb-86ed-486e-867f-b8732ef182a9', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:42:48.324 [main] MemberService - Member registration service has begun with the provide: Member{id='eef4f574-16c1-49a5-8697-7f3836057d32', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:43:02.857 [main] MemberService - Member registration service has begun with the provide: Member{id='c630b4d1-7b5a-4ae3-b230-4020dec53a5f', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:44:15.798 [main] MemberService - Member registration service has begun with the provide: Member{id='83d14a63-9ae4-4dd3-a62f-092b7e1f7a7a', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:45:52.117 [main] MemberService - Member registration service has begun with the provide: Member{id='8e5045c7-8008-4599-91bd-f01a833c175d', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:46:03.089 [main] MemberService - Member registration service has begun with the provide: Member{id='78af885b-ac74-4538-86de-3af5a5463e60', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:47:24.397 [main] MemberService - Member registration service has begun with the provide: Member{id='70acd6f1-250f-46b3-9972-97f5585b1697', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:48:13.162 [main] MemberService - Member registration service has begun with the provide: Member{id='6a9c5e00-5fa5-4ffb-abbe-1b721e4142d2', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:50:05.194 [main] MemberService - Member registration service has begun with the provide: Member{id='c1068250-03e8-4051-9ec0-023e3a8da7e6', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:57:26.884 [main] MemberService - Member registration service has begun with the provide: Member{id='78fae2d7-a79b-49e7-a35f-3e7f78108fd8', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:57:36.187 [main] MemberService - Member registration service has begun with the provide: Member{id='44e5573a-7610-4212-9004-9e76240eea64', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 14:58:06.137 [main] MemberService - Member registration service has begun with the provide: Member{id='20ee458b-f7fe-4d69-bb35-ef538a8cabf8', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 15:00:19.534 [main] MemberService - Member registration service has begun with the provide: Member{id='1dfe957e-18e0-4e71-893e-6ad9cea0ae91', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 15:01:01.256 [main] MemberService - Member registration service has begun with the provide: Member{id='4fc4efcc-a43e-48e6-a4d0-f6a8f9071b87', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 15:04:38.821 [main] MemberService - Member registration service has begun with the provide: Member{id='2ee97f49-b07e-41df-95c3-8e1462fd96ad', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 15:07:50.780 [main] MemberService - Member registration service has begun with the provide: Member{id='8be7641b-90ba-4652-b0a1-c42177cc2327', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 15:09:21.981 [main] MemberService - Member registration service has begun with the provide: Member{id='eccaed10-d892-4578-9c43-954e8abed85f', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:40:28.358 [main] MemberService - Member registration service has begun with the provide: Member{id='3fded40a-c524-43bf-bbcc-0527786ef521', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:41:44.735 [main] MemberService - Member registration service has begun with the provide: Member{id='a6269e85-dfba-4cf1-a0a0-4bbd71a09c2a', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:42:45.065 [main] MemberService - Member registration service has begun with the provide: Member{id='c62dd2c2-1eaf-407d-bdd7-594371ac877f', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:44:27.969 [main] MemberService - Member registration service has begun with the provide: Member{id='c20c3d5d-f64c-48a0-b822-950bbbbfd1e6', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:44:50.616 [main] MemberService - Member registration service has begun with the provide: Member{id='ce0effef-f31a-4bdf-a897-a341c443c7ab', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:45:32.072 [main] MemberService - Member registration service has begun with the provide: Member{id='8f3b470e-8b24-4562-b548-c80419dcfb4f', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:45:54.456 [main] MemberService - Member registration service has begun with the provide: Member{id='424f027f-d87c-44f9-88a3-2f6c28822c14', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:46:15.395 [main] MemberService - Member registration service has begun with the provide: Member{id='a9fe184f-c4ea-4968-a1ae-b7cd868efa6a', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:54:20.201 [main] MemberService - Member registration service has begun with the provide: Member{id='8fe75a07-ad95-4275-9052-02fae40cefd1', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:55:23.583 [main] MemberService - Member registration service has begun with the provide: Member{id='89135db1-6447-48fd-a202-9ddbd6c1438b', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:55:37.725 [main] MemberService - Member registration service has begun with the provide: Member{id='9c44368c-0281-41cf-9476-54c6fa732f9c', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[INFO ] 2022-08-19 16:56:55.936 [main] MemberService - Member registration service has begun with the provide: Member{id='7cf4b2b7-32e5-4b67-a8a5-7a5830b6d34f', email='valid', fullName='valid', experienceMonths=12, registrationDate=2022-08-19}
+[DEBUG] 2022-08-22 10:21:33.274 [main] AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@8909f18
+[DEBUG] 2022-08-22 10:21:33.288 [main] DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+[DEBUG] 2022-08-22 10:21:33.321 [main] ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: file [/home/cjester/Desktop/Revature/batches/stacks-on-stacks/nabnak/target/classes/com/revature/nabnak/member/MemberDao.class]
+[DEBUG] 2022-08-22 10:21:33.322 [main] ClassPathBeanDefinitionScanner - Identified candidate component class: file [/home/cjester/Desktop/Revature/batches/stacks-on-stacks/nabnak/target/classes/com/revature/nabnak/member/MemberService.class]
+[WARN ] 2022-08-22 10:21:33.372 [main] AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 1 in XML document from class path resource [hibernate.properties] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+[DEBUG] 2022-08-22 10:24:59.069 [http-nio-5000-exec-3] logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[DEBUG] 2022-08-22 10:24:59.075 [http-nio-5000-exec-3] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-22 10:24:59.075 [http-nio-5000-exec-3] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-22 10:24:59.078 [http-nio-5000-exec-3] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2022-08-22 10:24:59.089 [http-nio-5000-exec-3] Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+[INFO ] 2022-08-22 10:24:59.091 [http-nio-5000-exec-3] Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=postgres, hibernate.connection.password=****, hibernate.dialect=org.hibernate.dialect.PostgreSQL10Dialect, hibernate.connection.url=jdbc:postgresql://jester-db-instance.ckg7r7hyod4k.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=nabnak, hibernate.show_sql=true, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=org.postgresql.Driver, hibernate.hbm2ddl.auto=update}
+[DEBUG] 2022-08-22 10:24:59.161 [http-nio-5000-exec-3] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-22 10:24:59.161 [http-nio-5000-exec-3] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-22 10:24:59.161 [http-nio-5000-exec-3] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[DEBUG] 2022-08-22 10:24:59.164 [http-nio-5000-exec-3] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2022-08-22 10:24:59.164 [http-nio-5000-exec-3] Configuration - Building session factory using provided StandardServiceRegistry
+[DEBUG] 2022-08-22 10:24:59.168 [http-nio-5000-exec-3] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[DEBUG] 2022-08-22 10:24:59.169 [http-nio-5000-exec-3] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2022-08-22 10:24:59.176 [http-nio-5000-exec-3] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[DEBUG] 2022-08-22 10:24:59.190 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@735637f7
+[DEBUG] 2022-08-22 10:24:59.190 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@735637f7
+[DEBUG] 2022-08-22 10:24:59.190 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@735637f7
+[DEBUG] 2022-08-22 10:24:59.190 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6e8b318a
+[DEBUG] 2022-08-22 10:24:59.191 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@5faee9dc
+[DEBUG] 2022-08-22 10:24:59.191 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@637752bb
+[DEBUG] 2022-08-22 10:24:59.192 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@73ce75f9
+[DEBUG] 2022-08-22 10:24:59.192 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@73ce75f9
+[DEBUG] 2022-08-22 10:24:59.192 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@73ce75f9
+[DEBUG] 2022-08-22 10:24:59.192 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@7ddbc058
+[DEBUG] 2022-08-22 10:24:59.192 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@7ddbc058
+[DEBUG] 2022-08-22 10:24:59.192 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@7ddbc058
+[DEBUG] 2022-08-22 10:24:59.193 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@46a2f1b6
+[DEBUG] 2022-08-22 10:24:59.193 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@46a2f1b6
+[DEBUG] 2022-08-22 10:24:59.193 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@46a2f1b6
+[DEBUG] 2022-08-22 10:24:59.194 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@782ed423
+[DEBUG] 2022-08-22 10:24:59.194 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@782ed423
+[DEBUG] 2022-08-22 10:24:59.194 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@782ed423
+[DEBUG] 2022-08-22 10:24:59.194 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@384864a1
+[DEBUG] 2022-08-22 10:24:59.194 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@384864a1
+[DEBUG] 2022-08-22 10:24:59.195 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@384864a1
+[DEBUG] 2022-08-22 10:24:59.195 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@684e34a
+[DEBUG] 2022-08-22 10:24:59.195 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@684e34a
+[DEBUG] 2022-08-22 10:24:59.195 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@684e34a
+[DEBUG] 2022-08-22 10:24:59.196 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7bff7f01
+[DEBUG] 2022-08-22 10:24:59.196 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7bff7f01
+[DEBUG] 2022-08-22 10:24:59.196 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@7bff7f01
+[DEBUG] 2022-08-22 10:24:59.196 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@17606b00
+[DEBUG] 2022-08-22 10:24:59.196 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@17606b00
+[DEBUG] 2022-08-22 10:24:59.197 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@413cb96c
+[DEBUG] 2022-08-22 10:24:59.197 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@413cb96c
+[DEBUG] 2022-08-22 10:24:59.197 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@5ba52fe1
+[DEBUG] 2022-08-22 10:24:59.197 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@5ba52fe1
+[DEBUG] 2022-08-22 10:24:59.198 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@5d779964
+[DEBUG] 2022-08-22 10:24:59.198 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@8a82475
+[DEBUG] 2022-08-22 10:24:59.198 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@c048acc
+[DEBUG] 2022-08-22 10:24:59.199 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@c048acc
+[DEBUG] 2022-08-22 10:24:59.199 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@4845b139
+[DEBUG] 2022-08-22 10:24:59.199 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@4845b139
+[DEBUG] 2022-08-22 10:24:59.205 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@21361aae
+[DEBUG] 2022-08-22 10:24:59.205 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@21361aae
+[DEBUG] 2022-08-22 10:24:59.206 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@a19afc7
+[DEBUG] 2022-08-22 10:24:59.206 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@a19afc7
+[DEBUG] 2022-08-22 10:24:59.207 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7d1bde68
+[DEBUG] 2022-08-22 10:24:59.207 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7d1bde68
+[DEBUG] 2022-08-22 10:24:59.207 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@4139ba8e
+[DEBUG] 2022-08-22 10:24:59.208 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@4139ba8e
+[DEBUG] 2022-08-22 10:24:59.208 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7dcabd07
+[DEBUG] 2022-08-22 10:24:59.208 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7dcabd07
+[DEBUG] 2022-08-22 10:24:59.209 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@5afef887
+[DEBUG] 2022-08-22 10:24:59.209 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@5afef887
+[DEBUG] 2022-08-22 10:24:59.211 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@bb0b1e7
+[DEBUG] 2022-08-22 10:24:59.211 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@bb0b1e7
+[DEBUG] 2022-08-22 10:24:59.211 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@2dfa438d
+[DEBUG] 2022-08-22 10:24:59.211 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@2dfa438d
+[DEBUG] 2022-08-22 10:24:59.212 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@41f0a9f3
+[DEBUG] 2022-08-22 10:24:59.212 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@41f0a9f3
+[DEBUG] 2022-08-22 10:24:59.213 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@40a61a5d
+[DEBUG] 2022-08-22 10:24:59.213 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@40a61a5d
+[DEBUG] 2022-08-22 10:24:59.213 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@40a61a5d
+[DEBUG] 2022-08-22 10:24:59.213 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@7faae5c5
+[DEBUG] 2022-08-22 10:24:59.214 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@67de5780
+[DEBUG] 2022-08-22 10:24:59.214 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@67de5780
+[DEBUG] 2022-08-22 10:24:59.214 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@67de5780
+[DEBUG] 2022-08-22 10:24:59.214 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@365ab52d
+[DEBUG] 2022-08-22 10:24:59.215 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@727d8a12
+[DEBUG] 2022-08-22 10:24:59.215 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@41d55558
+[DEBUG] 2022-08-22 10:24:59.215 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@41d55558
+[DEBUG] 2022-08-22 10:24:59.216 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@6c6e755
+[DEBUG] 2022-08-22 10:24:59.216 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@6c6e755
+[DEBUG] 2022-08-22 10:24:59.216 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@4a27901e
+[DEBUG] 2022-08-22 10:24:59.216 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4a27901e
+[DEBUG] 2022-08-22 10:24:59.217 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@215f02e9
+[DEBUG] 2022-08-22 10:24:59.217 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@215f02e9
+[DEBUG] 2022-08-22 10:24:59.217 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@5c06e049
+[DEBUG] 2022-08-22 10:24:59.217 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@5c06e049
+[DEBUG] 2022-08-22 10:24:59.218 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@37d144c2
+[DEBUG] 2022-08-22 10:24:59.218 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@29990a61
+[DEBUG] 2022-08-22 10:24:59.218 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@29990a61
+[DEBUG] 2022-08-22 10:24:59.218 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@29990a61
+[DEBUG] 2022-08-22 10:24:59.219 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@469e5346
+[DEBUG] 2022-08-22 10:24:59.219 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@469e5346
+[DEBUG] 2022-08-22 10:24:59.219 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@469e5346
+[DEBUG] 2022-08-22 10:24:59.219 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@4793ac03
+[DEBUG] 2022-08-22 10:24:59.219 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@a485045
+[DEBUG] 2022-08-22 10:24:59.220 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@6f66e06b
+[DEBUG] 2022-08-22 10:24:59.220 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@6f66e06b
+[DEBUG] 2022-08-22 10:24:59.220 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@6f66e06b
+[DEBUG] 2022-08-22 10:24:59.220 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@8251a6a
+[DEBUG] 2022-08-22 10:24:59.221 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@8251a6a
+[DEBUG] 2022-08-22 10:24:59.221 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@8251a6a
+[DEBUG] 2022-08-22 10:24:59.221 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@6892bd53
+[DEBUG] 2022-08-22 10:24:59.221 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@7764d1a1
+[DEBUG] 2022-08-22 10:24:59.222 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@209453f0
+[DEBUG] 2022-08-22 10:24:59.222 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@209453f0
+[DEBUG] 2022-08-22 10:24:59.222 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@13c08cef
+[DEBUG] 2022-08-22 10:24:59.223 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@176e96a8
+[DEBUG] 2022-08-22 10:24:59.223 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@176e96a8
+[DEBUG] 2022-08-22 10:24:59.223 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@692c00c4
+[DEBUG] 2022-08-22 10:24:59.223 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@692c00c4
+[DEBUG] 2022-08-22 10:24:59.224 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@127828b3
+[DEBUG] 2022-08-22 10:24:59.224 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@6e00fe0f
+[DEBUG] 2022-08-22 10:24:59.224 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@161e174a
+[DEBUG] 2022-08-22 10:24:59.226 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@760edac7
+[DEBUG] 2022-08-22 10:24:59.226 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@760edac7
+[DEBUG] 2022-08-22 10:24:59.226 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7e067e13
+[DEBUG] 2022-08-22 10:24:59.226 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@7ede4bf6
+[DEBUG] 2022-08-22 10:24:59.226 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@172f640
+[DEBUG] 2022-08-22 10:24:59.226 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@b93152
+[DEBUG] 2022-08-22 10:24:59.226 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4d0231b0
+[DEBUG] 2022-08-22 10:24:59.226 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@410f521d
+[DEBUG] 2022-08-22 10:24:59.227 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@57596c8a
+[DEBUG] 2022-08-22 10:24:59.227 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@1e23e492
+[DEBUG] 2022-08-22 10:24:59.241 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2022-08-22 10:24:59.242 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2022-08-22 10:24:59.242 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-22 10:24:59.242 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-22 10:24:59.243 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2022-08-22 10:24:59.243 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2022-08-22 10:24:59.243 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2022-08-22 10:24:59.244 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-22 10:24:59.245 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2022-08-22 10:24:59.245 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2022-08-22 10:24:59.245 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2022-08-22 10:24:59.245 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2022-08-22 10:24:59.245 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-22 10:24:59.246 [http-nio-5000-exec-3] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[WARN ] 2022-08-22 10:24:59.249 [http-nio-5000-exec-3] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2022-08-22 10:24:59.251 [http-nio-5000-exec-3] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://jester-db-instance.ckg7r7hyod4k.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=nabnak]
+[INFO ] 2022-08-22 10:24:59.251 [http-nio-5000-exec-3] pooling - HHH10001001: Connection properties: {user=postgres, password=javaReact1000}
+[INFO ] 2022-08-22 10:24:59.251 [http-nio-5000-exec-3] pooling - HHH10001003: Autocommit mode: false
+[DEBUG] 2022-08-22 10:24:59.252 [http-nio-5000-exec-3] DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
+[INFO ] 2022-08-22 10:24:59.252 [http-nio-5000-exec-3] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[DEBUG] 2022-08-22 10:24:59.561 [http-nio-5000-exec-3] JdbcEnvironmentInitiator - Database ->
+       name : PostgreSQL
+    version : 13.4
+      major : 13
+      minor : 4
+[DEBUG] 2022-08-22 10:24:59.561 [http-nio-5000-exec-3] JdbcEnvironmentInitiator - Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.3.3
+      major : 42
+      minor : 3
+[DEBUG] 2022-08-22 10:24:59.562 [http-nio-5000-exec-3] JdbcEnvironmentInitiator - JDBC version : 4.2
+[INFO ] 2022-08-22 10:24:59.567 [http-nio-5000-exec-3] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+[DEBUG] 2022-08-22 10:24:59.573 [http-nio-5000-exec-3] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+[DEBUG] 2022-08-22 10:24:59.623 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@96f6b3f
+[DEBUG] 2022-08-22 10:24:59.623 [http-nio-5000-exec-3] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@96f6b3f
+[DEBUG] 2022-08-22 10:24:59.623 [http-nio-5000-exec-3] BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@5c06e049
+[DEBUG] 2022-08-22 10:24:59.624 [http-nio-5000-exec-3] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@63c6212] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@3b749212]
+[DEBUG] 2022-08-22 10:24:59.638 [http-nio-5000-exec-3] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2022-08-22 10:24:59.644 [http-nio-5000-exec-3] AnnotationBinder - Binding entity from annotated class: com.revature.nabnak.member.Member
+[DEBUG] 2022-08-22 10:24:59.653 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-22 10:24:59.655 [http-nio-5000-exec-3] EntityBinder - Import with entity name Member
+[DEBUG] 2022-08-22 10:24:59.656 [http-nio-5000-exec-3] EntityBinder - Bind entity com.revature.nabnak.member.Member on table members
+[DEBUG] 2022-08-22 10:24:59.664 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.665 [http-nio-5000-exec-3] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.nabnak.member.Member] is safe
+[DEBUG] 2022-08-22 10:24:59.665 [http-nio-5000-exec-3] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.nabnak.member.Member
+[DEBUG] 2022-08-22 10:24:59.665 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2022-08-22 10:24:59.666 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.member.Member:id]
+[DEBUG] 2022-08-22 10:24:59.667 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2022-08-22 10:24:59.668 [http-nio-5000-exec-3] PropertyBinder - Building property id
+[DEBUG] 2022-08-22 10:24:59.669 [http-nio-5000-exec-3] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, assigned, , ...)
+[DEBUG] 2022-08-22 10:24:59.669 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=email, insertable=true, updatable=true, unique=true}
+[DEBUG] 2022-08-22 10:24:59.669 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property email with lazy=false
+[DEBUG] 2022-08-22 10:24:59.669 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.member.Member:email]
+[DEBUG] 2022-08-22 10:24:59.669 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for email
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] PropertyBinder - Building property email
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=experience_months, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property experienceMonths with lazy=false
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.member.Member:experienceMonths]
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for experienceMonths
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] PropertyBinder - Building property experienceMonths
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=full_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property fullName with lazy=false
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.member.Member:fullName]
+[DEBUG] 2022-08-22 10:24:59.670 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for fullName
+[DEBUG] 2022-08-22 10:24:59.671 [http-nio-5000-exec-3] PropertyBinder - Building property fullName
+[DEBUG] 2022-08-22 10:24:59.671 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.671 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property password with lazy=false
+[DEBUG] 2022-08-22 10:24:59.671 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.member.Member:password]
+[DEBUG] 2022-08-22 10:24:59.671 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for password
+[DEBUG] 2022-08-22 10:24:59.671 [http-nio-5000-exec-3] PropertyBinder - Building property password
+[DEBUG] 2022-08-22 10:24:59.672 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=registration_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.672 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property registrationDate with lazy=false
+[DEBUG] 2022-08-22 10:24:59.672 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.member.Member:registrationDate]
+[DEBUG] 2022-08-22 10:24:59.672 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for registrationDate
+[DEBUG] 2022-08-22 10:24:59.672 [http-nio-5000-exec-3] PropertyBinder - Building property registrationDate
+[DEBUG] 2022-08-22 10:24:59.675 [http-nio-5000-exec-3] AnnotationBinder - Binding entity from annotated class: com.revature.nabnak.card.Card
+[DEBUG] 2022-08-22 10:24:59.676 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-22 10:24:59.676 [http-nio-5000-exec-3] EntityBinder - Import with entity name Card
+[DEBUG] 2022-08-22 10:24:59.676 [http-nio-5000-exec-3] EntityBinder - Bind entity com.revature.nabnak.card.Card on table card
+[DEBUG] 2022-08-22 10:24:59.679 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(card), mappingColumn=card_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.679 [http-nio-5000-exec-3] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.nabnak.card.Card] is safe
+[DEBUG] 2022-08-22 10:24:59.679 [http-nio-5000-exec-3] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.nabnak.card.Card
+[DEBUG] 2022-08-22 10:24:59.679 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property cardId with lazy=false
+[DEBUG] 2022-08-22 10:24:59.679 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.card.Card:cardId]
+[DEBUG] 2022-08-22 10:24:59.679 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for cardId
+[DEBUG] 2022-08-22 10:24:59.679 [http-nio-5000-exec-3] PropertyBinder - Building property cardId
+[DEBUG] 2022-08-22 10:24:59.680 [http-nio-5000-exec-3] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(card_id)]), cardId, identity, , ...)
+[DEBUG] 2022-08-22 10:24:59.680 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(card), mappingColumn=description, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.680 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property description with lazy=false
+[DEBUG] 2022-08-22 10:24:59.680 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.card.Card:description]
+[DEBUG] 2022-08-22 10:24:59.680 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for description
+[DEBUG] 2022-08-22 10:24:59.680 [http-nio-5000-exec-3] PropertyBinder - Building property description
+[DEBUG] 2022-08-22 10:24:59.681 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='member_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-22 10:24:59.681 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(card), mappingColumn=memberId, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.682 [http-nio-5000-exec-3] PropertyBinder - Building property memberId
+[DEBUG] 2022-08-22 10:24:59.683 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(card), mappingColumn=points, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.683 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property points with lazy=false
+[DEBUG] 2022-08-22 10:24:59.683 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.card.Card:points]
+[DEBUG] 2022-08-22 10:24:59.683 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for points
+[DEBUG] 2022-08-22 10:24:59.683 [http-nio-5000-exec-3] PropertyBinder - Building property points
+[DEBUG] 2022-08-22 10:24:59.683 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(card), mappingColumn=status, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.683 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property status with lazy=false
+[DEBUG] 2022-08-22 10:24:59.683 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.card.Card:status]
+[DEBUG] 2022-08-22 10:24:59.684 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for status
+[DEBUG] 2022-08-22 10:24:59.684 [http-nio-5000-exec-3] PropertyBinder - Building property status
+[DEBUG] 2022-08-22 10:24:59.684 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(card), mappingColumn=tech, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.685 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property tech with lazy=false
+[DEBUG] 2022-08-22 10:24:59.685 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.card.Card:tech]
+[DEBUG] 2022-08-22 10:24:59.685 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for tech
+[DEBUG] 2022-08-22 10:24:59.685 [http-nio-5000-exec-3] PropertyBinder - Building property tech
+[DEBUG] 2022-08-22 10:24:59.685 [http-nio-5000-exec-3] AnnotationBinder - Binding entity from annotated class: com.revature.nabnak.team.Team
+[DEBUG] 2022-08-22 10:24:59.685 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-22 10:24:59.685 [http-nio-5000-exec-3] EntityBinder - Import with entity name Team
+[DEBUG] 2022-08-22 10:24:59.685 [http-nio-5000-exec-3] EntityBinder - Bind entity com.revature.nabnak.team.Team on table teams
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(teams), mappingColumn=teamName, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.nabnak.team.Team] is safe
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.nabnak.team.Team
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property teamName with lazy=false
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.team.Team:teamName]
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for teamName
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] PropertyBinder - Building property teamName
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(teamName)]), teamName, assigned, , ...)
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(teams), mappingColumn=teamSize, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.686 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property teamSize with lazy=false
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.team.Team:teamSize]
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for teamSize
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] PropertyBinder - Building property teamSize
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] AnnotationBinder - Binding entity from annotated class: com.revature.nabnak.board.Board
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] EntityBinder - Import with entity name Board
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] EntityBinder - Bind entity com.revature.nabnak.board.Board on table boards
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(boards), mappingColumn=board_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.nabnak.board.Board] is safe
+[DEBUG] 2022-08-22 10:24:59.687 [http-nio-5000-exec-3] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.nabnak.board.Board
+[DEBUG] 2022-08-22 10:24:59.688 [http-nio-5000-exec-3] PropertyBinder - MetadataSourceProcessor property board_id with lazy=false
+[DEBUG] 2022-08-22 10:24:59.710 [http-nio-5000-exec-3] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.nabnak.board.Board:board_id]
+[DEBUG] 2022-08-22 10:24:59.711 [http-nio-5000-exec-3] SimpleValueBinder - building SimpleValue for board_id
+[DEBUG] 2022-08-22 10:24:59.711 [http-nio-5000-exec-3] PropertyBinder - Building property board_id
+[DEBUG] 2022-08-22 10:24:59.712 [http-nio-5000-exec-3] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(board_id)]), board_id, assigned, , ...)
+[DEBUG] 2022-08-22 10:24:59.713 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2022-08-22 10:24:59.713 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for email
+[DEBUG] 2022-08-22 10:24:59.713 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for experienceMonths
+[DEBUG] 2022-08-22 10:24:59.713 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for fullName
+[DEBUG] 2022-08-22 10:24:59.713 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for password
+[DEBUG] 2022-08-22 10:24:59.714 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for registrationDate
+[DEBUG] 2022-08-22 10:24:59.714 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for cardId
+[DEBUG] 2022-08-22 10:24:59.714 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for description
+[DEBUG] 2022-08-22 10:24:59.714 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for points
+[DEBUG] 2022-08-22 10:24:59.714 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for status
+[DEBUG] 2022-08-22 10:24:59.714 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for tech
+[DEBUG] 2022-08-22 10:24:59.714 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for teamName
+[DEBUG] 2022-08-22 10:24:59.714 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for teamSize
+[DEBUG] 2022-08-22 10:24:59.714 [http-nio-5000-exec-3] SimpleValueBinder - Starting fillSimpleValue for board_id
+[DEBUG] 2022-08-22 10:24:59.716 [http-nio-5000-exec-3] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [members]
+[DEBUG] 2022-08-22 10:24:59.717 [http-nio-5000-exec-3] PrimaryKey - Forcing column [card_id] to be non-null as it is part of the primary key for table [card]
+[DEBUG] 2022-08-22 10:24:59.717 [http-nio-5000-exec-3] PrimaryKey - Forcing column [teamname] to be non-null as it is part of the primary key for table [teams]
+[DEBUG] 2022-08-22 10:24:59.717 [http-nio-5000-exec-3] PrimaryKey - Forcing column [board_id] to be non-null as it is part of the primary key for table [boards]
+[DEBUG] 2022-08-22 10:24:59.717 [http-nio-5000-exec-3] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.nabnak.member.Member
+[DEBUG] 2022-08-22 10:24:59.718 [http-nio-5000-exec-3] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.nabnak.member.Member
+[DEBUG] 2022-08-22 10:24:59.732 [http-nio-5000-exec-3] SessionFactoryImpl - Building session factory
+[DEBUG] 2022-08-22 10:24:59.732 [http-nio-5000-exec-3] Settings - SessionFactory name : null
+[DEBUG] 2022-08-22 10:24:59.732 [http-nio-5000-exec-3] Settings - Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2022-08-22 10:24:59.732 [http-nio-5000-exec-3] Settings - Automatic session close at end of transaction: disabled
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Statistics: disabled
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Default entity-mode: pojo
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Allow initialization of lazy state outside session : disabled
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Using BatchFetchStyle : LEGACY
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Default batch fetch size: -1
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Maximum outer join fetch depth: null
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Default null ordering: NONE
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Order SQL updates by primary key: disabled
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Order SQL inserts for batching: disabled
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - multi-tenancy strategy : NONE
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - JTA Track by Thread: enabled
+[DEBUG] 2022-08-22 10:24:59.733 [http-nio-5000-exec-3] Settings - Query language substitutions: {}
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Named query checking : enabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Second-level cache: disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Second-level query cache: disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Second-level query cache factory: null
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Second-level cache region prefix: null
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Structured second-level cache entries: disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Second-level cache direct-reference entries: disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Automatic eviction of collection cache: disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - JDBC batch size: 15
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - JDBC batch updates for versioned data: enabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Scrollable result sets: enabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Wrap result sets: disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - JDBC result set fetch size: null
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - Generate SQL with comments: disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - JPA compliance - query : disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - JPA compliance - closed-handling : disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - JPA compliance - lists : disabled
+[DEBUG] 2022-08-22 10:24:59.734 [http-nio-5000-exec-3] Settings - JPA compliance - transactions : disabled
+[DEBUG] 2022-08-22 10:24:59.756 [http-nio-5000-exec-3] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-22 10:24:59.757 [http-nio-5000-exec-3] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-22 10:24:59.763 [http-nio-5000-exec-3] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2022-08-22 10:24:59.763 [http-nio-5000-exec-3] SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=gnome, awt.toolkit=sun.awt.X11.XToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.PostgreSQL10Dialect, java.class.path=/opt/jdk8u332-b09/jre/lib/charsets.jar:/opt/jdk8u332-b09/jre/lib/ext/cldrdata.jar:/opt/jdk8u332-b09/jre/lib/ext/dnsns.jar:/opt/jdk8u332-b09/jre/lib/ext/jaccess.jar:/opt/jdk8u332-b09/jre/lib/ext/localedata.jar:/opt/jdk8u332-b09/jre/lib/ext/nashorn.jar:/opt/jdk8u332-b09/jre/lib/ext/sunec.jar:/opt/jdk8u332-b09/jre/lib/ext/sunjce_provider.jar:/opt/jdk8u332-b09/jre/lib/ext/sunpkcs11.jar:/opt/jdk8u332-b09/jre/lib/ext/zipfs.jar:/opt/jdk8u332-b09/jre/lib/jce.jar:/opt/jdk8u332-b09/jre/lib/jfr.jar:/opt/jdk8u332-b09/jre/lib/jsse.jar:/opt/jdk8u332-b09/jre/lib/management-agent.jar:/opt/jdk8u332-b09/jre/lib/resources.jar:/opt/jdk8u332-b09/jre/lib/rt.jar:/home/cjester/Desktop/Revature/batches/stacks-on-stacks/nabnak/target/classes:/home/cjester/.m2/repository/org/postgresql/postgresql/42.3.3/postgresql-42.3.3.jar:/home/cjester/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/home/cjester/.m2/repository/net/bytebuddy/byte-buddy/1.12.10/byte-buddy-1.12.10.jar:/home/cjester/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.23/tomcat-embed-core-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-annotations-api/8.5.23/tomcat-annotations-api-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/8.5.23/tomcat-embed-jasper-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.23/tomcat-embed-el-8.5.23.jar:/home/cjester/.m2/repository/org/eclipse/jdt/ecj/3.12.3/ecj-3.12.3.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-jasper/8.5.23/tomcat-jasper-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-servlet-api/8.5.23/tomcat-servlet-api-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-juli/8.5.23/tomcat-juli-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-el-api/8.5.23/tomcat-el-api-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-api/8.5.23/tomcat-api-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-util-scan/8.5.23/tomcat-util-scan-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-util/8.5.23/tomcat-util-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-jasper-el/8.5.23/tomcat-jasper-el-8.5.23.jar:/home/cjester/.m2/repository/org/apache/tomcat/tomcat-jsp-api/8.5.23/tomcat-jsp-api-8.5.23.jar:/home/cjester/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.3/jackson-databind-2.13.3.jar:/home/cjester/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.3/jackson-annotations-2.13.3.jar:/home/cjester/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.3/jackson-core-2.13.3.jar:/home/cjester/.m2/repository/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar:/home/cjester/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar:/home/cjester/.m2/repository/org/hibernate/hibernate-core/5.6.9.Final/hibernate-core-5.6.9.Final.jar:/home/cjester/.m2/repository/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar:/home/cjester/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/home/cjester/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/cjester/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/home/cjester/.m2/repository/org/jboss/jandex/2.4.2.Final/jandex-2.4.2.Final.jar:/home/cjester/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/cjester/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/cjester/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/home/cjester/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/cjester/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/home/cjester/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/home/cjester/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/home/cjester/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/home/cjester/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar:/home/cjester/.m2/repository/org/springframework/spring-context/5.3.22/spring-context-5.3.22.jar:/home/cjester/.m2/repository/org/springframework/spring-aop/5.3.22/spring-aop-5.3.22.jar:/home/cjester/.m2/repository/org/springframework/spring-beans/5.3.22/spring-beans-5.3.22.jar:/home/cjester/.m2/repository/org/springframework/spring-core/5.3.22/spring-core-5.3.22.jar:/home/cjester/.m2/repository/org/springframework/spring-jcl/5.3.22/spring-jcl-5.3.22.jar:/home/cjester/.m2/repository/org/springframework/spring-expression/5.3.22/spring-expression-5.3.22.jar:/home/cjester/.m2/repository/org/springframework/data/spring-data-jpa/2.7.2/spring-data-jpa-2.7.2.jar:/home/cjester/.m2/repository/org/springframework/data/spring-data-commons/2.7.2/spring-data-commons-2.7.2.jar:/home/cjester/.m2/repository/org/springframework/spring-orm/5.3.22/spring-orm-5.3.22.jar:/home/cjester/.m2/repository/org/springframework/spring-jdbc/5.3.22/spring-jdbc-5.3.22.jar:/home/cjester/.m2/repository/org/springframework/spring-tx/5.3.22/spring-tx-5.3.22.jar:/home/cjester/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/snap/intellij-idea-community/384/lib/idea_rt.jar, java.vm.vendor=Temurin, sun.arch.data.model=64, java.vendor.url=https://adoptium.net/, catalina.useNaming=false, user.timezone=America/New_York, os.name=Linux, java.vm.specification.version=1.8, user.country=US, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=/opt/jdk8u332-b09/jre/lib/amd64, sun.java.command=com.revature.nabnak.MainDriver, sun.cpu.endian=little, user.home=/home/cjester, user.language=en, java.specification.vendor=Oracle Corporation, java.home=/opt/jdk8u332-b09/jre, file.separator=/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, sun.boot.class.path=/opt/jdk8u332-b09/jre/lib/resources.jar:/opt/jdk8u332-b09/jre/lib/rt.jar:/opt/jdk8u332-b09/jre/lib/sunrsasign.jar:/opt/jdk8u332-b09/jre/lib/jsse.jar:/opt/jdk8u332-b09/jre/lib/jce.jar:/opt/jdk8u332-b09/jre/lib/charsets.jar:/opt/jdk8u332-b09/jre/lib/jfr.jar:/opt/jdk8u332-b09/jre/classes, hibernate.hbm2ddl.auto=update, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_332-b09, user.name=cjester, path.separator=:, hibernate.connection.username=****, os.version=5.15.0-46-generic, java.endorsed.dirs=/opt/jdk8u332-b09/jre/lib/endorsed, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:postgresql://jester-db-instance.ckg7r7hyod4k.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=nabnak, file.encoding=UTF-8, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=https://github.com/adoptium/adoptium-support/issues, java.io.tmpdir=/tmp, catalina.home=/home/cjester/Desktop/Revature/batches/stacks-on-stacks/nabnak/tomcat.8080, java.version=1.8.0_332, user.dir=/home/cjester/Desktop/Revature/batches/stacks-on-stacks/nabnak, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.print.PSPrinterJob, sun.os.patch.level=unknown, catalina.base=/home/cjester/Desktop/Revature/batches/stacks-on-stacks/nabnak/tomcat.8080, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@566720d4, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vm.info=mixed mode, java.vendor=Temurin, java.vm.version=25.332-b09, hibernate.bytecode.use_reflection_optimizer=false, java.ext.dirs=/opt/jdk8u332-b09/jre/lib/ext:/usr/java/packages/lib/ext, sun.io.unicode.encoding=UnicodeLittle, java.class.version=52.0}
+[DEBUG] 2022-08-22 10:24:59.769 [http-nio-5000-exec-3] JaccIntegrator - Skipping JACC integration as it was not enabled
+[DEBUG] 2022-08-22 10:24:59.772 [http-nio-5000-exec-3] EnumType - Using NAMED-based conversion for Enum com.revature.nabnak.card.Card$Status
+[DEBUG] 2022-08-22 10:24:59.772 [http-nio-5000-exec-3] EnumType - Using NAMED-based conversion for Enum com.revature.nabnak.card.Card$Tech
+[DEBUG] 2022-08-22 10:24:59.773 [http-nio-5000-exec-3] SessionFactoryImpl - Instantiated session factory
+[DEBUG] 2022-08-22 10:24:59.773 [http-nio-5000-exec-3] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@63c6212] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@5ed57dbc]
+[DEBUG] 2022-08-22 10:24:59.802 [http-nio-5000-exec-3] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.nabnak.member.Member] is safe
+[DEBUG] 2022-08-22 10:24:59.803 [http-nio-5000-exec-3] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.nabnak.member.Member
+[DEBUG] 2022-08-22 10:24:59.886 [http-nio-5000-exec-3] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.nabnak.team.Team] is safe
+[DEBUG] 2022-08-22 10:24:59.887 [http-nio-5000-exec-3] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.nabnak.team.Team
+[DEBUG] 2022-08-22 10:24:59.892 [http-nio-5000-exec-3] interceptor - To-one property `com.revature.nabnak.card.Card#memberId` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-22 10:24:59.892 [http-nio-5000-exec-3] interceptor - To-one property `com.revature.nabnak.card.Card#memberId` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-22 10:24:59.893 [http-nio-5000-exec-3] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.nabnak.card.Card] is safe
+[DEBUG] 2022-08-22 10:24:59.893 [http-nio-5000-exec-3] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.nabnak.card.Card
+[DEBUG] 2022-08-22 10:24:59.901 [http-nio-5000-exec-3] interceptor - To-one property `com.revature.nabnak.card.Card#memberId` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-22 10:24:59.902 [http-nio-5000-exec-3] interceptor - To-one property `com.revature.nabnak.card.Card#memberId` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-22 10:24:59.902 [http-nio-5000-exec-3] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.nabnak.board.Board] is safe
+[DEBUG] 2022-08-22 10:24:59.902 [http-nio-5000-exec-3] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.nabnak.board.Board
+[DEBUG] 2022-08-22 10:24:59.908 [http-nio-5000-exec-3] AbstractEntityPersister - Static SQL for entity: com.revature.nabnak.member.Member
+[DEBUG] 2022-08-22 10:24:59.908 [http-nio-5000-exec-3] AbstractEntityPersister -  Version select: select id from members where id =?
+[DEBUG] 2022-08-22 10:24:59.908 [http-nio-5000-exec-3] AbstractEntityPersister -  Snapshot select: select member_.id, member_.email as email2_2_, member_.experience_months as experien3_2_, member_.full_name as full_nam4_2_, member_.password as password5_2_, member_.registration_date as registra6_2_ from members member_ where member_.id=?
+[DEBUG] 2022-08-22 10:24:59.908 [http-nio-5000-exec-3] AbstractEntityPersister -  Insert 0: insert into members (email, experience_months, full_name, password, registration_date, id) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2022-08-22 10:24:59.908 [http-nio-5000-exec-3] AbstractEntityPersister -  Update 0: update members set email=?, experience_months=?, full_name=?, password=?, registration_date=? where id=?
+[DEBUG] 2022-08-22 10:24:59.909 [http-nio-5000-exec-3] AbstractEntityPersister -  Delete 0: delete from members where id=?
+[DEBUG] 2022-08-22 10:24:59.918 [http-nio-5000-exec-3] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@20ef3258]
+[DEBUG] 2022-08-22 10:24:59.919 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2022-08-22 10:24:59.919 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : experienceMonths
+[DEBUG] 2022-08-22 10:24:59.919 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : fullName
+[DEBUG] 2022-08-22 10:24:59.919 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2022-08-22 10:24:59.919 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : registrationDate
+[DEBUG] 2022-08-22 10:24:59.919 [http-nio-5000-exec-3] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-22 10:24:59.924 [http-nio-5000-exec-3] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-22 10:24:59.926 [http-nio-5000-exec-3] LoadPlanTreePrinter - LoadPlan(entity=com.revature.nabnak.member.Member)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.nabnak.member.Member, querySpaceUid=<gen:0>, path=com.revature.nabnak.member.Member)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.nabnak.member.Member)
+          - SQL table alias mapping - member0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+[DEBUG] 2022-08-22 10:24:59.926 [http-nio-5000-exec-3] EntityLoader - Static select for entity com.revature.nabnak.member.Member [NONE]: select member0_.id as id1_2_0_, member0_.email as email2_2_0_, member0_.experience_months as experien3_2_0_, member0_.full_name as full_nam4_2_0_, member0_.password as password5_2_0_, member0_.registration_date as registra6_2_0_ from members member0_ where member0_.id=?
+[DEBUG] 2022-08-22 10:24:59.926 [http-nio-5000-exec-3] AbstractEntityPersister - Static SQL for entity: com.revature.nabnak.team.Team
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] AbstractEntityPersister -  Version select: select teamName from teams where teamName =?
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] AbstractEntityPersister -  Snapshot select: select team_.teamName, team_.teamSize as teamsize2_3_ from teams team_ where team_.teamName=?
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] AbstractEntityPersister -  Insert 0: insert into teams (teamSize, teamName) values (?, ?)
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] AbstractEntityPersister -  Update 0: update teams set teamSize=? where teamName=?
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] AbstractEntityPersister -  Delete 0: delete from teams where teamName=?
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5f1ca730]
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : teamSize
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] LoadPlanTreePrinter - LoadPlan(entity=com.revature.nabnak.team.Team)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.nabnak.team.Team, querySpaceUid=<gen:0>, path=com.revature.nabnak.team.Team)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.nabnak.team.Team)
+          - SQL table alias mapping - team0_
+          - alias suffix - 0_
+          - suffixed key columns - {teamname1_3_0_}
+
+[DEBUG] 2022-08-22 10:24:59.927 [http-nio-5000-exec-3] EntityLoader - Static select for entity com.revature.nabnak.team.Team [NONE]: select team0_.teamName as teamname1_3_0_, team0_.teamSize as teamsize2_3_0_ from teams team0_ where team0_.teamName=?
+[DEBUG] 2022-08-22 10:24:59.928 [http-nio-5000-exec-3] AbstractEntityPersister - Static SQL for entity: com.revature.nabnak.card.Card
+[DEBUG] 2022-08-22 10:24:59.928 [http-nio-5000-exec-3] AbstractEntityPersister -  Version select: select card_id from card where card_id =?
+[DEBUG] 2022-08-22 10:24:59.928 [http-nio-5000-exec-3] AbstractEntityPersister -  Snapshot select: select card_.card_id, card_.description as descript2_1_, card_.member_id as member_i6_1_, card_.points as points3_1_, card_.status as status4_1_, card_.tech as tech5_1_ from card card_ where card_.card_id=?
+[DEBUG] 2022-08-22 10:24:59.928 [http-nio-5000-exec-3] AbstractEntityPersister -  Insert 0: insert into card (description, member_id, points, status, tech, card_id) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2022-08-22 10:24:59.928 [http-nio-5000-exec-3] AbstractEntityPersister -  Update 0: update card set description=?, member_id=?, points=?, status=?, tech=? where card_id=?
+[DEBUG] 2022-08-22 10:24:59.928 [http-nio-5000-exec-3] AbstractEntityPersister -  Delete 0: delete from card where card_id=?
+[DEBUG] 2022-08-22 10:24:59.928 [http-nio-5000-exec-3] AbstractEntityPersister -  Identity insert: insert into card (description, member_id, points, status, tech) values (?, ?, ?, ?, ?)
+[DEBUG] 2022-08-22 10:24:59.928 [http-nio-5000-exec-3] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3edbacfd]
+[DEBUG] 2022-08-22 10:24:59.929 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : description
+[DEBUG] 2022-08-22 10:24:59.929 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : memberId
+[DEBUG] 2022-08-22 10:24:59.930 [http-nio-5000-exec-3] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@16f7959b]
+[DEBUG] 2022-08-22 10:24:59.931 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : memberId.email
+[DEBUG] 2022-08-22 10:24:59.931 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : memberId.experienceMonths
+[DEBUG] 2022-08-22 10:24:59.931 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : memberId.fullName
+[DEBUG] 2022-08-22 10:24:59.931 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : memberId.password
+[DEBUG] 2022-08-22 10:24:59.931 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : memberId.registrationDate
+[DEBUG] 2022-08-22 10:24:59.931 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2022-08-22 10:24:59.931 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : status
+[DEBUG] 2022-08-22 10:24:59.931 [http-nio-5000-exec-3] MetamodelGraphWalker - Visiting attribute path : tech
+[DEBUG] 2022-08-22 10:24:59.931 [http-nio-5000-exec-3] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-22 10:24:59.932 [http-nio-5000-exec-3] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-22 10:24:59.932 [http-nio-5000-exec-3] LoadPlanTreePrinter - LoadPlan(entity=com.revature.nabnak.card.Card)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.nabnak.card.Card, querySpaceUid=<gen:0>, path=com.revature.nabnak.card.Card)
+          - EntityAttributeFetchImpl(entity=com.revature.nabnak.member.Member, querySpaceUid=<gen:1>, path=com.revature.nabnak.card.Card.memberId)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.nabnak.card.Card)
+          - SQL table alias mapping - card0_
+          - alias suffix - 0_
+          - suffixed key columns - {card_id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(memberId)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.nabnak.member.Member)
+                - SQL table alias mapping - member1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+
+[DEBUG] 2022-08-22 10:24:59.932 [http-nio-5000-exec-3] EntityLoader - Static select for entity com.revature.nabnak.card.Card [NONE]: select card0_.card_id as card_id1_1_0_, card0_.description as descript2_1_0_, card0_.member_id as member_i6_1_0_, card0_.points as points3_1_0_, card0_.status as status4_1_0_, card0_.tech as tech5_1_0_, member1_.id as id1_2_1_, member1_.email as email2_2_1_, member1_.experience_months as experien3_2_1_, member1_.full_name as full_nam4_2_1_, member1_.password as password5_2_1_, member1_.registration_date as registra6_2_1_ from card card0_ inner join members member1_ on card0_.member_id=member1_.id where card0_.card_id=?
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] AbstractEntityPersister - Static SQL for entity: com.revature.nabnak.board.Board
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] AbstractEntityPersister -  Version select: select board_id from boards where board_id =?
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] AbstractEntityPersister -  Snapshot select: select board_.board_id from boards board_ where board_.board_id=?
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] AbstractEntityPersister -  Insert 0: insert into boards (board_id) values (?)
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] AbstractEntityPersister -  Update 0: null
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] AbstractEntityPersister -  Delete 0: delete from boards where board_id=?
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@650c672a]
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] LoadPlanTreePrinter - LoadPlan(entity=com.revature.nabnak.board.Board)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.nabnak.board.Board, querySpaceUid=<gen:0>, path=com.revature.nabnak.board.Board)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.nabnak.board.Board)
+          - SQL table alias mapping - board0_
+          - alias suffix - 0_
+          - suffixed key columns - {board_id1_0_0_}
+
+[DEBUG] 2022-08-22 10:24:59.933 [http-nio-5000-exec-3] EntityLoader - Static select for entity com.revature.nabnak.board.Board [NONE]: select board0_.board_id as board_id1_0_0_ from boards board0_ where board0_.board_id=?
+[INFO ] 2022-08-22 10:24:59.952 [http-nio-5000-exec-3] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3fe4a50e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 2022-08-22 10:25:00.005 [http-nio-5000-exec-3] Table - No alter strings for table : boards
+[DEBUG] 2022-08-22 10:25:00.005 [http-nio-5000-exec-3] Table - No alter strings for table : card
+[DEBUG] 2022-08-22 10:25:00.005 [http-nio-5000-exec-3] Table - No alter strings for table : members
+[DEBUG] 2022-08-22 10:25:00.005 [http-nio-5000-exec-3] Table - No alter strings for table : teams
+[DEBUG] 2022-08-22 10:25:00.126 [http-nio-5000-exec-3] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2022-08-22 10:25:00.127 [http-nio-5000-exec-3] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2022-08-22 10:25:00.129 [http-nio-5000-exec-3] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-08-22 10:25:00.129 [http-nio-5000-exec-3] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2022-08-22 10:25:00.130 [http-nio-5000-exec-3] NamedQueryRepository - Checking 0 named HQL queries
+[DEBUG] 2022-08-22 10:25:00.130 [http-nio-5000-exec-3] NamedQueryRepository - Checking 0 named SQL queries
+[DEBUG] 2022-08-22 10:25:00.132 [http-nio-5000-exec-3] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-22 10:25:00.134 [http-nio-5000-exec-3] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@31cc4d3b
+[DEBUG] 2022-08-22 10:25:00.135 [http-nio-5000-exec-3] SessionFactoryRegistry - Registering SessionFactory: b70b85c6-691e-4d89-bc3d-d1989c608d44 (<unnamed>)
+[DEBUG] 2022-08-22 10:25:00.135 [http-nio-5000-exec-3] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2022-08-22 10:25:00.161 [http-nio-5000-exec-3] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2022-08-22 10:25:00.163 [http-nio-5000-exec-3] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2022-08-22 10:25:00.163 [http-nio-5000-exec-3] TransactionImpl - begin
+[DEBUG] 2022-08-22 10:25:00.169 [http-nio-5000-exec-3] QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@7be29bbc
+[DEBUG] 2022-08-22 10:25:00.179 [http-nio-5000-exec-3] QueryTranslatorImpl - parse() - HQL: FROM com.revature.nabnak.member.Member
+[DEBUG] 2022-08-22 10:25:00.181 [http-nio-5000-exec-3] ErrorTracker - Keyword  'member' is being interpreted as an identifier due to: expecting IDENT, found 'member'
+[DEBUG] 2022-08-22 10:25:00.182 [http-nio-5000-exec-3] ErrorTracker - Keyword  'Member' is being interpreted as an identifier due to: expecting IDENT, found 'Member'
+[DEBUG] 2022-08-22 10:25:00.182 [http-nio-5000-exec-3] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2022-08-22 10:25:00.185 [http-nio-5000-exec-3] QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       \-[FROM] Node: 'FROM'
+          \-[RANGE] Node: 'RANGE'
+             \-[DOT] Node: '.'
+                +-[DOT] Node: '.'
+                |  +-[DOT] Node: '.'
+                |  |  +-[DOT] Node: '.'
+                |  |  |  +-[IDENT] Node: 'com'
+                |  |  |  \-[IDENT] Node: 'revature'
+                |  |  \-[IDENT] Node: 'nabnak'
+                |  \-[WEIRD_IDENT] Node: 'member'
+                \-[WEIRD_IDENT] Node: 'Member'
+
+[DEBUG] 2022-08-22 10:25:00.194 [http-nio-5000-exec-3] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2022-08-22 10:25:00.198 [http-nio-5000-exec-3] FromElement - FromClause{level=1} : com.revature.nabnak.member.Member (<no alias>) -> member0_
+[DEBUG] 2022-08-22 10:25:00.199 [http-nio-5000-exec-3] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2022-08-22 10:25:00.199 [http-nio-5000-exec-3] HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} members member0_ ) )
+[DEBUG] 2022-08-22 10:25:00.201 [http-nio-5000-exec-3] HqlSqlWalker - Derived SELECT clause created.
+[DEBUG] 2022-08-22 10:25:00.202 [http-nio-5000-exec-3] JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Member): [members]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(com.revature.nabnak.member.Member)
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+[DEBUG] 2022-08-22 10:25:00.203 [http-nio-5000-exec-3] JoinProcessor - Using FROM fragment [members member0_]
+[DEBUG] 2022-08-22 10:25:00.203 [http-nio-5000-exec-3] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2022-08-22 10:25:00.204 [http-nio-5000-exec-3] QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (members)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'member0_.id as id1_2_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=members,tableAlias=member0_,origin=null,columns={,className=com.revature.nabnak.member.Member}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'member0_.email as email2_2_, member0_.experience_months as experien3_2_, member0_.full_name as full_nam4_2_, member0_.password as password5_2_, member0_.registration_date as registra6_2_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[member0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'members member0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=members,tableAlias=member0_,origin=null,columns={,className=com.revature.nabnak.member.Member}}
+
+[DEBUG] 2022-08-22 10:25:00.204 [http-nio-5000-exec-3] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2022-08-22 10:25:00.206 [http-nio-5000-exec-3] QueryTranslatorImpl - HQL: FROM com.revature.nabnak.member.Member
+[DEBUG] 2022-08-22 10:25:00.206 [http-nio-5000-exec-3] QueryTranslatorImpl - SQL: select member0_.id as id1_2_, member0_.email as email2_2_, member0_.experience_months as experien3_2_, member0_.full_name as full_nam4_2_, member0_.password as password5_2_, member0_.registration_date as registra6_2_ from members member0_
+[DEBUG] 2022-08-22 10:25:00.207 [http-nio-5000-exec-3] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2022-08-22 10:25:00.212 [http-nio-5000-exec-3] SQL - select member0_.id as id1_2_, member0_.email as email2_2_, member0_.experience_months as experien3_2_, member0_.full_name as full_nam4_2_, member0_.password as password5_2_, member0_.registration_date as registra6_2_ from members member0_
+[DEBUG] 2022-08-22 10:25:00.224 [http-nio-5000-exec-3] Loader - Result set row: 0
+[DEBUG] 2022-08-22 10:25:00.225 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#8048d36c-0db5-49eb-b097-307b23d3650f]
+[DEBUG] 2022-08-22 10:25:00.228 [http-nio-5000-exec-3] Loader - Result set row: 1
+[DEBUG] 2022-08-22 10:25:00.228 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#db7665b3-f411-4afc-b6b5-5e606505d16e]
+[DEBUG] 2022-08-22 10:25:00.228 [http-nio-5000-exec-3] Loader - Result set row: 2
+[DEBUG] 2022-08-22 10:25:00.228 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#81f0b8ca-aa31-4087-b47c-3536436d32cd]
+[DEBUG] 2022-08-22 10:25:00.228 [http-nio-5000-exec-3] Loader - Result set row: 3
+[DEBUG] 2022-08-22 10:25:00.228 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#459498ab-de03-436a-9f12-5ee24cd3fcff]
+[DEBUG] 2022-08-22 10:25:00.228 [http-nio-5000-exec-3] Loader - Result set row: 4
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#6fd15282-767d-4510-8892-9049a62adbe9]
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result set row: 5
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#869a4fd5-35de-4b9c-b5c3-af9fba86a92a]
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result set row: 6
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#cc4f57ef-1e87-4335-b6b7-86f7f72ceb72]
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result set row: 7
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#88efbefd-9edc-41be-87cb-e9aedd64e433]
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result set row: 8
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#d40d050c-4d89-48fd-8e28-535e2a89dd42]
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result set row: 9
+[DEBUG] 2022-08-22 10:25:00.229 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#6d0e3a4a-13e3-49d7-bcda-81b0a42a3649]
+[DEBUG] 2022-08-22 10:25:00.230 [http-nio-5000-exec-3] Loader - Result set row: 10
+[DEBUG] 2022-08-22 10:25:00.230 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#00a41f97-35ba-429e-8f00-1d75220b9c79]
+[DEBUG] 2022-08-22 10:25:00.230 [http-nio-5000-exec-3] Loader - Result set row: 11
+[DEBUG] 2022-08-22 10:25:00.230 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#cd6c6021-9bab-4242-97ca-07b1e7b5196a]
+[DEBUG] 2022-08-22 10:25:00.230 [http-nio-5000-exec-3] Loader - Result set row: 12
+[DEBUG] 2022-08-22 10:25:00.230 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#dacdf7c5-fdce-44fc-a553-a203e95940cc]
+[DEBUG] 2022-08-22 10:25:00.230 [http-nio-5000-exec-3] Loader - Result set row: 13
+[DEBUG] 2022-08-22 10:25:00.230 [http-nio-5000-exec-3] Loader - Result row: EntityKey[com.revature.nabnak.member.Member#34d0ffe9-05f3-4bd8-a21d-796dc2a6feb6]
+[DEBUG] 2022-08-22 10:25:00.231 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#8048d36c-0db5-49eb-b097-307b23d3650f]
+[DEBUG] 2022-08-22 10:25:00.231 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = ne@mail.com
+[DEBUG] 2022-08-22 10:25:00.231 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.232 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 2400
+[DEBUG] 2022-08-22 10:25:00.232 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.232 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = Jeff Jordan
+[DEBUG] 2022-08-22 10:25:00.232 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.232 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = goodCatch
+[DEBUG] 2022-08-22 10:25:00.232 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.232 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-16
+[DEBUG] 2022-08-22 10:25:00.232 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.232 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#8048d36c-0db5-49eb-b097-307b23d3650f]
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#db7665b3-f411-4afc-b6b5-5e606505d16e]
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = jj@mail.com
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 2400
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = Jeffrey Jordan
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = superPass
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-16
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#db7665b3-f411-4afc-b6b5-5e606505d16e]
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#81f0b8ca-aa31-4087-b47c-3536436d32cd]
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = kd@mail.com
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 480
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.233 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = Kim Dang
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = unspokenLastName
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-17
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#81f0b8ca-aa31-4087-b47c-3536436d32cd]
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#459498ab-de03-436a-9f12-5ee24cd3fcff]
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = jf@mail.com
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 420
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = John Fortnite
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.234 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = fortnite
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-17
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#459498ab-de03-436a-9f12-5ee24cd3fcff]
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#6fd15282-767d-4510-8892-9049a62adbe9]
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = db@mail.com
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 0
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = Dave Bender
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = chunkyPeanutButter
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-17
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#6fd15282-767d-4510-8892-9049a62adbe9]
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#869a4fd5-35de-4b9c-b5c3-af9fba86a92a]
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = cm@mail.com
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.235 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 9001
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = Chocolate Meltyson
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = chocolatemelting
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-17
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#869a4fd5-35de-4b9c-b5c3-af9fba86a92a]
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#cc4f57ef-1e87-4335-b6b7-86f7f72ceb72]
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = dbz@mail.com
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 10000
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = Next Time
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = over9000
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-17
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.236 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#cc4f57ef-1e87-4335-b6b7-86f7f72ceb72]
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#88efbefd-9edc-41be-87cb-e9aedd64e433]
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = beans@mail.com
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 420
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = The Bean Gobbler
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = idontlikebeans
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-18
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#88efbefd-9edc-41be-87cb-e9aedd64e433]
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#d40d050c-4d89-48fd-8e28-535e2a89dd42]
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = cj1@mail.com
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 9001
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = The REAL CJ
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.237 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = denver
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-18
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#d40d050c-4d89-48fd-8e28-535e2a89dd42]
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#6d0e3a4a-13e3-49d7-bcda-81b0a42a3649]
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = sd@mail.com
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 10000000
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = Snoop Dogg
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = blazeIt
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-18
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#6d0e3a4a-13e3-49d7-bcda-81b0a42a3649]
+[DEBUG] 2022-08-22 10:25:00.238 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#00a41f97-35ba-429e-8f00-1d75220b9c79]
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = www@mail.com
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 101
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = The wicked witch of the west
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = wizeofoz
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-18
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#00a41f97-35ba-429e-8f00-1d75220b9c79]
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#cd6c6021-9bab-4242-97ca-07b1e7b5196a]
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = cb@mail.com
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 50
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = Caleb Beck
+[DEBUG] 2022-08-22 10:25:00.239 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = gudPassword
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-18
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#cd6c6021-9bab-4242-97ca-07b1e7b5196a]
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#dacdf7c5-fdce-44fc-a553-a203e95940cc]
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = ididntdoit@mail.com
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 0
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = OJ Simpson
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = football
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-18
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#dacdf7c5-fdce-44fc-a553-a203e95940cc]
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Resolving attributes for [com.revature.nabnak.member.Member#34d0ffe9-05f3-4bd8-a21d-796dc2a6feb6]
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `email` : value = not_the_chocolate_kind@mail.com
+[DEBUG] 2022-08-22 10:25:00.240 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.241 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `experienceMonths` : value = 50
+[DEBUG] 2022-08-22 10:25:00.241 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`experienceMonths`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.241 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `fullName` : value = The third musketeer
+[DEBUG] 2022-08-22 10:25:00.241 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`fullName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.241 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `password` : value = france
+[DEBUG] 2022-08-22 10:25:00.241 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.241 [http-nio-5000-exec-3] TwoPhaseLoad - Processing attribute `registrationDate` : value = 2022-08-18
+[DEBUG] 2022-08-22 10:25:00.241 [http-nio-5000-exec-3] TwoPhaseLoad - Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2022-08-22 10:25:00.241 [http-nio-5000-exec-3] TwoPhaseLoad - Done materializing entity [com.revature.nabnak.member.Member#34d0ffe9-05f3-4bd8-a21d-796dc2a6feb6]
+[DEBUG] 2022-08-22 10:25:00.242 [http-nio-5000-exec-3] TransactionImpl - committing
+[DEBUG] 2022-08-22 10:25:00.243 [http-nio-5000-exec-3] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2022-08-22 10:25:00.245 [http-nio-5000-exec-3] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2022-08-22 10:25:00.248 [http-nio-5000-exec-3] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 14 objects
+[DEBUG] 2022-08-22 10:25:00.248 [http-nio-5000-exec-3] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[DEBUG] 2022-08-22 10:25:00.248 [http-nio-5000-exec-3] EntityPrinter - Listing entities:
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=unspokenLastName, experienceMonths=480, registrationDate=2022-08-17, fullName=Kim Dang, id=81f0b8ca-aa31-4087-b47c-3536436d32cd, email=kd@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=gudPassword, experienceMonths=50, registrationDate=2022-08-18, fullName=Caleb Beck, id=cd6c6021-9bab-4242-97ca-07b1e7b5196a, email=cb@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=chunkyPeanutButter, experienceMonths=0, registrationDate=2022-08-17, fullName=Dave Bender, id=6fd15282-767d-4510-8892-9049a62adbe9, email=db@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=idontlikebeans, experienceMonths=420, registrationDate=2022-08-18, fullName=The Bean Gobbler, id=88efbefd-9edc-41be-87cb-e9aedd64e433, email=beans@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=goodCatch, experienceMonths=2400, registrationDate=2022-08-16, fullName=Jeff Jordan, id=8048d36c-0db5-49eb-b097-307b23d3650f, email=ne@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=fortnite, experienceMonths=420, registrationDate=2022-08-17, fullName=John Fortnite, id=459498ab-de03-436a-9f12-5ee24cd3fcff, email=jf@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=wizeofoz, experienceMonths=101, registrationDate=2022-08-18, fullName=The wicked witch of the west, id=00a41f97-35ba-429e-8f00-1d75220b9c79, email=www@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=denver, experienceMonths=9001, registrationDate=2022-08-18, fullName=The REAL CJ, id=d40d050c-4d89-48fd-8e28-535e2a89dd42, email=cj1@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=football, experienceMonths=0, registrationDate=2022-08-18, fullName=OJ Simpson, id=dacdf7c5-fdce-44fc-a553-a203e95940cc, email=ididntdoit@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=france, experienceMonths=50, registrationDate=2022-08-18, fullName=The third musketeer, id=34d0ffe9-05f3-4bd8-a21d-796dc2a6feb6, email=not_the_chocolate_kind@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=over9000, experienceMonths=10000, registrationDate=2022-08-17, fullName=Next Time, id=cc4f57ef-1e87-4335-b6b7-86f7f72ceb72, email=dbz@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=chocolatemelting, experienceMonths=9001, registrationDate=2022-08-17, fullName=Chocolate Meltyson, id=869a4fd5-35de-4b9c-b5c3-af9fba86a92a, email=cm@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=blazeIt, experienceMonths=10000000, registrationDate=2022-08-18, fullName=Snoop Dogg, id=6d0e3a4a-13e3-49d7-bcda-81b0a42a3649, email=sd@mail.com}
+[DEBUG] 2022-08-22 10:25:00.249 [http-nio-5000-exec-3] EntityPrinter - com.revature.nabnak.member.Member{password=superPass, experienceMonths=2400, registrationDate=2022-08-16, fullName=Jeffrey Jordan, id=db7665b3-f411-4afc-b6b5-5e606505d16e, email=jj@mail.com}
+[DEBUG] 2022-08-22 10:25:00.263 [http-nio-5000-exec-3] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2022-08-22 10:25:00.263 [http-nio-5000-exec-3] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[INFO ] 2022-08-22 10:25:19.784 [http-nio-5000-exec-1] Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+[INFO ] 2022-08-22 10:25:19.789 [http-nio-5000-exec-1] Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=postgres, hibernate.connection.password=****, hibernate.dialect=org.hibernate.dialect.PostgreSQL10Dialect, hibernate.connection.url=jdbc:postgresql://jester-db-instance.ckg7r7hyod4k.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=nabnak, hibernate.show_sql=true, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=org.postgresql.Driver, hibernate.hbm2ddl.auto=update}
+[INFO ] 2022-08-22 10:25:19.873 [http-nio-5000-exec-1] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2022-08-22 10:25:19.934 [http-nio-5000-exec-1] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2022-08-22 10:25:19.936 [http-nio-5000-exec-1] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://jester-db-instance.ckg7r7hyod4k.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=nabnak]
+[INFO ] 2022-08-22 10:25:19.936 [http-nio-5000-exec-1] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[INFO ] 2022-08-22 10:25:19.936 [http-nio-5000-exec-1] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2022-08-22 10:25:19.938 [http-nio-5000-exec-1] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2022-08-22 10:25:20.263 [http-nio-5000-exec-1] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+[INFO ] 2022-08-22 10:25:20.625 [http-nio-5000-exec-1] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a5dd743] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2022-08-22 10:25:20.753 [http-nio-5000-exec-1] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]

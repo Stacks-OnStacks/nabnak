@@ -5,21 +5,17 @@ package com.revature.nabnak;
 */
 
 import com.revature.nabnak.util.ServletContext;
-
-import java.io.File;
-import java.net.MalformedURLException;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MainDriver {
 
 
     public static void main(String[] args) {
 
+            ServletContext servletContext = new ServletContext();
+            servletContext.run();
 
-        ServletContext servletContext = new ServletContext();
-        servletContext.run();
 
     }
-
-
 
 }
