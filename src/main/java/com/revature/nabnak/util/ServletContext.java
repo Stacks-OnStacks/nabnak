@@ -62,7 +62,7 @@ public class ServletContext {
                 tomcat.start(); // there is a default port on your computer for testing, 8080 this is a "developers port"
                 tomcat.getServer().await();
 
-            } catch (LifecycleException | ServletException e) {
+            } catch (LifecycleException e) {
                 throw new RuntimeException(e);
             }
         }
