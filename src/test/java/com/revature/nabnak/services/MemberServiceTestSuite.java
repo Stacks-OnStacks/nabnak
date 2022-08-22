@@ -1,6 +1,6 @@
 package com.revature.nabnak.services;
 
-import com.revature.nabnak.member.MemberDao;
+import com.revature.nabnak.member.MemberRepository;
 import com.revature.nabnak.member.Member;
 import com.revature.nabnak.member.MemberService;
 import com.revature.nabnak.member.dto.requests.NewRegistrationRequest;
@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Date;
-import java.util.LinkedList;
 
 import static org.mockito.Mockito.*;
 
@@ -18,13 +17,13 @@ public class MemberServiceTestSuite {
 
     MemberService sut ;
     //MemberDao memberDao;
-    MemberDao mockMemberDao;
+    MemberRepository mockMemberRepository;
 
     @BeforeEach // this goes ahead and re-creates our sut every single test, so we are working with a fresh instance
     public void testPrep(){
        // memberDao = new MemberDao(); // for now this is "okay", but badd in long run, cannot repeatedly test for creation
-        mockMemberDao = mock(MemberDao.class); // mocktail of the MemberDao Class not an actual instance
-        sut = new MemberService(mockMemberDao);
+        mockMemberRepository = mock(MemberRepository.class); // mocktail of the MemberDao Class not an actual instance
+        sut = new MemberService(mockMemberRepository);
     }
 
     @Test
@@ -75,7 +74,7 @@ public class MemberServiceTestSuite {
         String email = "ar@mail.com";
         String password = "gatorFan";
 
-        when(mockMemberDao.loginCredentialCheck(email,password)).thenReturn(new Member());
+        when(mockMemberRepository.loginCredentialCheck(email,password)).thenReturn(new Member());
 
         //Act
         Member actualMember = sut.login(email, password);
@@ -91,14 +90,14 @@ public class MemberServiceTestSuite {
         validMember.setId(registrationRequest.getId());
 
         // when mocking we need to do a when/then for any DAO call
-        when(mockMemberDao.checkEmail(registrationRequest.getEmail())).thenReturn(true);
-        doReturn(validMember).when(mockMemberDao).create(validMember);
+        when(mockMemberRepository.checkEmail(registrationRequest.getEmail())).thenReturn(true);
+        doReturn(validMember).when(mockMemberRepository).create(validMember);
 
         MemberResponse actualNewMember = sut.registerMember(registrationRequest);
 
        Assertions.assertInstanceOf(MemberResponse.class, actualNewMember);
         // at the end we need to verify the number of dao calls from this method
-        verify(mockMemberDao, times(2));
+        verify(mockMemberRepository, times(2));
     }
 
 

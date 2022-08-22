@@ -5,8 +5,10 @@ import com.revature.nabnak.member.dto.requests.NewRegistrationRequest;
 import com.revature.nabnak.member.dto.response.MemberResponse;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
+import com.revature.nabnak.util.exceptions.ResourceNotFoundException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
 
 import java.sql.Date;
 import java.util.List;
@@ -14,16 +16,17 @@ import java.util.UUID;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+@Service
 public class MemberService {
     // Attributes
 
-    private final MemberDao memberDao;
+    private final MemberRepository memberRepository;
     private Member sessionMember = null;
     private final Logger logger = LogManager.getLogger();
 
     // CONSTRUCTOR
-    public MemberService(MemberDao memberDao){
-        this.memberDao = memberDao;
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
     }
     // Methods
     public MemberResponse registerMember(NewRegistrationRequest newRegistration) throws InvalidUserInputException, ResourcePersistanceException{
@@ -35,7 +38,7 @@ public class MemberService {
             newMember.setFullName(newRegistration.getFullName());
             newMember.setExperienceMonths(newRegistration.getExperienceMonths());
             newMember.setPassword(newRegistration.getPassword());
-            newMember.setId(newRegistration.getId());
+            newMember.setId(UUID.randomUUID().toString());
             // Java will set these for up
             newMember.setRegistrationDate(new Date(System.currentTimeMillis()));
 
@@ -48,14 +51,14 @@ public class MemberService {
                 throw new ResourcePersistanceException("Email is already registered please try logging in.");
             }
 
-            newMember = memberDao.create(newMember);
+            newMember = memberRepository.create(newMember);
 
             return new MemberResponse(newMember);
 
     }
     // TODO: NEW READ ME (Lines 43-73)
     public Member login(String email, String password){
-        Member member = memberDao.loginCredentialCheck(email, password);
+        Member member = memberRepository.loginCredentialCheck(email, password);
         sessionMember = member;
         return member;
     }
@@ -64,7 +67,7 @@ public class MemberService {
     public List<MemberResponse> readAll(){
 
         // Streams are a form of functional programming this is form a declarative programming
-        List<MemberResponse> members = memberDao.findAll()
+        List<MemberResponse> members = memberRepository.findAll()
                                                 .stream()//this reads through each value inside of the collection (aka our List)
                                                 //.map(member -> new MemberResponse(member))
                                                 // this is leveraging (::) which is know as the method reference operator, it's taking the method from MemberReponse and applying to all objects in the stream
@@ -75,7 +78,9 @@ public class MemberService {
     }
     public MemberResponse findById(String email){
 
-        Member member = memberDao.findById(email);
+        Member member = memberRepository.findById(email);
+        if(member == null)
+            throw new ResourceNotFoundException("Resource was not found in the database under the id = " + email);
         MemberResponse responseMember = new MemberResponse(member);
         return responseMember;
     }
@@ -93,15 +98,15 @@ public class MemberService {
 
     // TODO: IMPLEMENT MEEEEEEE!!!!!!!
     public boolean isEmailAvailable(String email){
-        return memberDao.checkEmail(email);
+        return memberRepository.checkEmail(email);
     }
 
     public boolean remove(String email){
-        return memberDao.delete(email);
+        return memberRepository.delete(email);
     }
     public boolean update(EditMemberRequest editMember) throws InvalidUserInputException{
 
-       Member foundMember = memberDao.findById(editMember.getId());
+       Member foundMember = memberRepository.findById(editMember.getId());
 
        // Predicate - to evaluate a true or false given a lambda expression
         // Lambda expression (arrow notation) - a syntax for a SINGULAR function
@@ -122,7 +127,7 @@ public class MemberService {
            foundMember.setEmail(editMember.getEmail());
        }
 
-        return memberDao.update(foundMember);
+        return memberRepository.update(foundMember);
     }
 
     public Member getSessionMember(){

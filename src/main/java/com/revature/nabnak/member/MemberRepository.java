@@ -6,12 +6,14 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 
 
 import java.io.IOException;
 import java.util.List;
 
-public class MemberDao implements Crudable<Member> {
+@Repository
+public class MemberRepository implements Crudable<Member> {
 
 
     @Override
