@@ -10,8 +10,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 import java.util.function.Predicate;
@@ -30,6 +32,8 @@ public class MemberService {
         this.memberRepository = memberRepository;
     }
     // Methods
+
+    @Transactional
     public MemberResponse registerMember(NewRegistrationRequest newRegistration) throws InvalidUserInputException, ResourcePersistanceException{
 
             Member newMember = new Member();
@@ -47,40 +51,43 @@ public class MemberService {
                 throw new InvalidUserInputException("User input was invalid");
             }
 
-            if(!isEmailAvailable(newMember.getEmail())){
+            if(isEmailAvailable(newMember.getEmail())){
                 throw new ResourcePersistanceException("Email is already registered please try logging in.");
             }
 
-            newMember = memberRepository.create(newMember);
+            newMember = memberRepository.save(newMember);
 
             return new MemberResponse(newMember);
 
     }
-    // TODO: NEW READ ME (Lines 43-73)
+    // TODO: Comeback for custom Repo method
+    @Transactional
     public Member login(String email, String password){
-        Member member = memberRepository.loginCredentialCheck(email, password);
+        Member member = memberRepository.loginCredentialCheck(email, password).orElseThrow(ResourceNotFoundException::new);
         sessionMember = member;
         return member;
     }
 
     // TODO: NEW READ ME (Lines 76 - 105)
+    @Transactional(readOnly = true)
     public List<MemberResponse> readAll(){
 
         // Streams are a form of functional programming this is form a declarative programming
-        List<MemberResponse> members = memberRepository.findAll()
+        List<MemberResponse> members = ((Collection<Member>) memberRepository.findAll()) // findAll now returns an Iterable we can cast an iterable to a Collection so we can stream it
                                                 .stream()//this reads through each value inside of the collection (aka our List)
                                                 //.map(member -> new MemberResponse(member))
                                                 // this is leveraging (::) which is know as the method reference operator, it's taking the method from MemberReponse and applying to all objects in the stream
                                                 .map(MemberResponse::new)
                                                 .collect(Collectors.toList());
-        ;
+
         return members;
     }
+
+    @Transactional(readOnly = true)
     public MemberResponse findById(String email){
 
-        Member member = memberRepository.findById(email);
-        if(member == null)
-            throw new ResourceNotFoundException("Resource was not found in the database under the id = " + email);
+        // Optional
+        Member member = memberRepository.findById(email).orElseThrow(ResourceNotFoundException::new);
         MemberResponse responseMember = new MemberResponse(member);
         return responseMember;
     }
@@ -97,21 +104,29 @@ public class MemberService {
     }
 
     // TODO: IMPLEMENT MEEEEEEE!!!!!!!
+    @Transactional(readOnly = true)
     public boolean isEmailAvailable(String email){
-        return memberRepository.checkEmail(email);
+        boolean result = memberRepository.checkEmail(email).isPresent();
+        logger.info("Value from is email Available returned: {}", result);
+        return result;
     }
 
+    @Transactional
     public boolean remove(String email){
-        return memberRepository.delete(email);
+        Member member = memberRepository.findById(email).orElseThrow(ResourceNotFoundException::new);
+        memberRepository.delete(member);
+        return true;
     }
+
+
+    @Transactional
     public boolean update(EditMemberRequest editMember) throws InvalidUserInputException{
 
-       Member foundMember = memberRepository.findById(editMember.getId());
+       Member foundMember = memberRepository.findById(editMember.getId()).orElseThrow(ResourceNotFoundException::new);
 
        // Predicate - to evaluate a true or false given a lambda expression
         // Lambda expression (arrow notation) - a syntax for a SINGULAR function
         Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
-
 
         // Example of Automatic Dirty Checking
        if(notNullOrEmpty.test(editMember.getFullName())){
@@ -121,13 +136,13 @@ public class MemberService {
                foundMember.setPassword(editMember.getPassword());
        }
        if(notNullOrEmpty.test(editMember.getEmail())){
-           if(!isEmailAvailable(editMember.getEmail())){
+           if(isEmailAvailable(editMember.getEmail())){
                throw new ResourcePersistanceException("The provided email is already registered");
            }
            foundMember.setEmail(editMember.getEmail());
        }
 
-        return memberRepository.update(foundMember);
+        return true;
     }
 
     public Member getSessionMember(){

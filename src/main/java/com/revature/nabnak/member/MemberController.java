@@ -65,7 +65,7 @@ public class MemberController {
     @ExceptionHandler(Exception.class)
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     public @ResponseBody String exception(Exception ex){
-        return "Error has occured in our program, please check logs" + ex.getClass().getName();
+        return "Error has occured in our program, please check logs" + ex.getClass().getName() + " with message: " + ex.getMessage();
     }
 
 }
