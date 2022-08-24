@@ -2,23 +2,27 @@ package com.revature.nabnak.card;
 
 import com.revature.nabnak.card.dto.requests.NewCardRequest;
 import com.revature.nabnak.card.dto.responses.CardResponse;
-import com.revature.nabnak.member.Member;
 import com.revature.nabnak.member.MemberService;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
+import com.revature.nabnak.util.exceptions.ResourceNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class CardService {
 
     private final MemberService memberService; // this now has it's own unique session
-    private final CardDao cardDao;
+    private final CardRepository cardRepository;
 
-    public CardService(MemberService memberService, CardDao cardDao){ // what's this methodology?
+    @Autowired
+    public CardService(MemberService memberService, CardRepository cardRepository){ // what's this methodology?
         this.memberService = memberService;
-        this.cardDao = cardDao;
+        this.cardRepository = cardRepository;
 
     }
 
@@ -31,32 +35,32 @@ public class CardService {
 
         areEnumsValid(cardRequest);
 
-       // Member member = memberService.findById(cardRequest.getId());
-
         Card newCard = new Card(cardRequest, memberService.getSessionMember());
 
-        return new CardResponse(cardDao.create(newCard));
+        return new CardResponse(cardRepository.save(newCard));
      }
 
      public List<CardResponse> findAllCards(){
-        return cardDao.findAll().stream().map(CardResponse::new).collect(Collectors.toList());
+        return ((Collection<Card>) cardRepository.findAll()).stream().map(CardResponse::new).collect(Collectors.toList());
      }
 
-     public List<Card> findAllCardsByMember(String email){
-        return cardDao.findAllByUser(email);
+     public List<CardResponse> findAllCardsByMember(String memberId){
+
+        return ((Collection<Card>) cardRepository.findAllByUser(memberId)).stream().map(CardResponse::new).collect(Collectors.toList());
      }
 
-     public Card findCardById(String id){
-        return cardDao.findById(id);
+     public CardResponse findCardById(String id){
+        return new CardResponse(cardRepository.findById(Integer.parseInt(id)).orElseThrow(ResourceNotFoundException::new));
      }
 
      public Card update(Card updatedCard){
-        cardDao.update(updatedCard);
+        cardRepository.save(updatedCard);
         return updatedCard;
      }
 
      public boolean delete(String id){
-        return cardDao.delete(id);
+         cardRepository.deleteById(Integer.parseInt(id));
+        return true;
      }
 
      public boolean areEnumsValid(NewCardRequest cardRequest) throws InvalidUserInputException{

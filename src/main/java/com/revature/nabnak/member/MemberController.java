@@ -56,16 +56,5 @@ public class MemberController {
         return "The update was applied to the member: " + memberService.update(editMemberRequest);
     }
 
-    @ExceptionHandler(ResourceNotFoundException.class)
-    @ResponseStatus(value = HttpStatus.NOT_FOUND)
-    public @ResponseBody String resourceNotFound(ResourceNotFoundException rnf){
-        return rnf.getMessage();
-    }
-
-    @ExceptionHandler(Exception.class)
-    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
-    public @ResponseBody String exception(Exception ex){
-        return "Error has occured in our program, please check logs" + ex.getClass().getName() + " with message: " + ex.getMessage();
-    }
 
 }
