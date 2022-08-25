@@ -50,7 +50,7 @@ public class AuthAspect {
             throw new UnauthorizedException("Forbidden request made to sensitive endpoint by member: " + member.getEmail());
         }
 
-        if(annotation.isAdmin() && !(member.getEmail() instanceof String)){
+        if(annotation.isAdmin() && member == null || !(member.getEmail() instanceof String)){
             throw new UnauthorizedException("Forbidden request made to admin endpoint by member: " + member.getEmail());
         }
 
