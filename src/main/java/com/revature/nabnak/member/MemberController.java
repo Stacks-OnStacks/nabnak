@@ -4,6 +4,7 @@ import com.revature.nabnak.member.dto.requests.EditMemberRequest;
 import com.revature.nabnak.member.dto.requests.NewRegistrationRequest;
 import com.revature.nabnak.member.dto.response.MemberResponse;
 import com.revature.nabnak.util.exceptions.ResourceNotFoundException;
+import com.revature.nabnak.util.web.Secured;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ public class MemberController {
     }
 
     @GetMapping
+    @Secured(allowedUsers = {"jj@mail.com"}, isLoggedIn = false, isAdmin = true)
     // Reminder: @ResponseBody & @RequestBody is using jackson under the hood for JSON marshalling (parsing to and from JSON to Java Object)
     public @ResponseBody List<MemberResponse> findAll(){
         return memberService.readAll();

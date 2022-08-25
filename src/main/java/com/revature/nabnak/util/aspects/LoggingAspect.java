@@ -32,7 +32,7 @@ public class LoggingAspect {
     @AfterThrowing(pointcut = "pcLogAll()", throwing = "t")
     public void logMethodThrowable(JoinPoint jp, Throwable t){
         String throwableName = t.getClass().getName();
-        logger.info("{} was thrown in {} at {} with message: {}", throwableName, extractClassMethodSignature(jp), LocalDateTime.now(), t.getMessage());
+        logger.warn("{} was thrown in {} at {} with message: {}", throwableName, extractClassMethodSignature(jp), LocalDateTime.now(), t.getMessage());
     }
 
     private String extractClassMethodSignature(JoinPoint jp){
