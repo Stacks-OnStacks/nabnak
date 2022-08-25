@@ -35,7 +35,7 @@ public class CardService {
 
         areEnumsValid(cardRequest);
 
-        Card newCard = new Card(cardRequest, memberService.getSessionMember());
+        Card newCard = new Card(cardRequest);
 
         return new CardResponse(cardRepository.save(newCard));
      }
@@ -54,6 +54,7 @@ public class CardService {
      }
 
      public Card update(Card updatedCard){
+
         cardRepository.save(updatedCard);
         return updatedCard;
      }

@@ -28,15 +28,14 @@ public class Card {
     private Status status; // Open, OPEN, open
 
     @ManyToOne
-    @JoinColumn(name="member_id", nullable = false)
+    @JoinColumn(name="member_id")
     private Member memberId;
 
-    public Card(NewCardRequest cardRequest, Member member) {
+    public Card(NewCardRequest cardRequest) {
         this.description = cardRequest.getDescription();
         this.points = cardRequest.getPoints();
         this.tech = Tech.valueOf(cardRequest.getTech().toUpperCase());
         this.status = Status.valueOf(cardRequest.getStatus().toUpperCase());
-        this.memberId = member;
     }
 
     public enum Tech{

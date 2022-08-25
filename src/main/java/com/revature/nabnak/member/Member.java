@@ -2,12 +2,14 @@ package com.revature.nabnak.member;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.revature.nabnak.card.Card;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Set;
 
 
 @Data // this handles toSTring, hashCode, equals() & getters & setters
@@ -37,11 +39,8 @@ public class Member {
     @Column(columnDefinition = "boolean default false")
     private boolean isAdmin = false;
 
-    public Member(String email, String fullName, int experienceMonths, Date registrationDate, String password) {
-        this.email = email;
-        this.fullName = fullName;
-        this.experienceMonths = experienceMonths;
-        this.registrationDate = registrationDate;
-        this.password = password;
-    }
+    // Establishing this to Cascade Delete all child records to keep Referential Integrity
+    @OneToMany(mappedBy = "memberId", cascade = CascadeType.ALL)
+    private Set<Card> cards;
+
 }

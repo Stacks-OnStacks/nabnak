@@ -36,23 +36,13 @@ public class AuthAspect {
         List<String> allowedUsers = Arrays.asList(annotation.allowedUsers());
         HttpSession session = req.getSession(false);
 
-        if(session == null){
-            throw new UnauthorizedException("No Session available");
-        }
-
-        if(annotation.isLoggedIn() && session.getAttribute("authMember") == null){
-            throw new UnauthorizedException("Please log in before calling this endpoint");
-        }
+        if(session == null) throw new UnauthorizedException("No Session available");
+        if(annotation.isLoggedIn() && session.getAttribute("authMember") == null) throw new UnauthorizedException("Please log in before calling this endpoint");
 
         Member member = (Member) session.getAttribute("authMember");
 
-        if(!allowedUsers.isEmpty() && !allowedUsers.contains(member.getEmail())){
-            throw new UnauthorizedException("Forbidden request made to sensitive endpoint by member: " + member.getEmail());
-        }
-
-        if(annotation.isAdmin() && !member.isAdmin()){
-            throw new UnauthorizedException("Forbidden request made to admin endpoint by member: " + member.getEmail());
-        }
+        if(!allowedUsers.isEmpty() && !allowedUsers.contains(member.getEmail())) throw new UnauthorizedException("Forbidden request made to sensitive endpoint by member: " + member.getEmail());
+        if(annotation.isAdmin() && !member.isAdmin()) throw new UnauthorizedException("Forbidden request made to admin endpoint by member: " + member.getEmail());
 
         return pjp.proceed(); // all this is doing is returning that JoinPoint to execute the method following the Annotation
     }
