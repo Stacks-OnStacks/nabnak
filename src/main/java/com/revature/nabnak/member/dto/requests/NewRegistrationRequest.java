@@ -1,21 +1,26 @@
 package com.revature.nabnak.member.dto.requests;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.*;
 import java.util.UUID;
 
+@Data
+@NoArgsConstructor
 public class NewRegistrationRequest {
 
     private String id;
-
+    @NotBlank(message = "Hey you need to enter your full name please")
+    @NotNull
     private String fullName;
-
+    @Email(message = "Please provide valid email")
     private String email;
 
+    @Pattern(message = "Minimum eight characters, at least one letter, one number and one special character",regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$")
     private String password;
-
+    @Min(value = 0)
     private int experienceMonths;
-
-    public NewRegistrationRequest() {
-    }
 
     public NewRegistrationRequest(String fullName, String email, String password, int experienceMonths) {
         this.fullName = fullName;
@@ -25,55 +30,4 @@ public class NewRegistrationRequest {
         this.id = UUID.randomUUID().toString();
     }
 
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId() {
-        this.id = UUID.randomUUID().toString();
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getExperienceMonths() {
-        return experienceMonths;
-    }
-
-    public void setExperienceMonths(int experienceMonths) {
-        this.experienceMonths = experienceMonths;
-    }
-
-
-
-    @Override
-    public String toString() {
-        return "NewRegistractionRequest{" +
-                "fullName='" + fullName + '\'' +
-                ", email='" + email + '\'' +
-                ", experienceMonths='" + experienceMonths + '\'' +
-                '}';
-    }
 }

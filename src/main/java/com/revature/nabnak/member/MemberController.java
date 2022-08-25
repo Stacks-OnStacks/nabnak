@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController // RestController is used so we don't have to repeat 1000 @ResponseBody infront of every return type.
@@ -32,7 +33,7 @@ public class MemberController {
     @GetMapping
     @Secured(allowedUsers = {"jj@mail.com"}, isLoggedIn = false, isAdmin = true)
     // Reminder: @ResponseBody & @RequestBody is using jackson under the hood for JSON marshalling (parsing to and from JSON to Java Object)
-    public @ResponseBody List<MemberResponse> findAll(){
+    public List<MemberResponse> findAll(){
         return memberService.readAll();
     }
 
@@ -49,14 +50,13 @@ public class MemberController {
 
     @PostMapping
     @ResponseStatus(value = HttpStatus.CREATED)
-    public @ResponseBody MemberResponse register(@RequestBody NewRegistrationRequest newRegistrationRequest){
+    public MemberResponse register(@RequestBody @Valid NewRegistrationRequest newRegistrationRequest){
         return memberService.registerMember(newRegistrationRequest);
     }
 
     @PutMapping
-    public @ResponseBody String update(@RequestBody EditMemberRequest editMemberRequest){
+    public String update(@RequestBody EditMemberRequest editMemberRequest){
         return "The update was applied to the member: " + memberService.update(editMemberRequest);
     }
-
 
 }
