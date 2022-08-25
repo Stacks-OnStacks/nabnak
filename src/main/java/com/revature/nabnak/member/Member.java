@@ -34,6 +34,9 @@ public class Member {
     @JsonAlias(value = {"Password", "pass", "theThing"})
     private String password;
 
+    @Column(columnDefinition = "boolean default false")
+    private boolean isAdmin = false;
+
     public Member(String email, String fullName, int experienceMonths, Date registrationDate, String password) {
         this.email = email;
         this.fullName = fullName;

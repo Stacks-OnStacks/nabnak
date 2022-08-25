@@ -46,11 +46,11 @@ public class AuthAspect {
 
         Member member = (Member) session.getAttribute("authMember");
 
-        if(!allowedUsers.contains(member.getEmail())){
+        if(!allowedUsers.isEmpty() && !allowedUsers.contains(member.getEmail())){
             throw new UnauthorizedException("Forbidden request made to sensitive endpoint by member: " + member.getEmail());
         }
 
-        if(annotation.isAdmin() && member == null || !(member.getEmail() instanceof String)){
+        if(annotation.isAdmin() && !member.isAdmin()){
             throw new UnauthorizedException("Forbidden request made to admin endpoint by member: " + member.getEmail());
         }
 

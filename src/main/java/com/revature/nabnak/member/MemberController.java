@@ -31,7 +31,7 @@ public class MemberController {
     }
 
     @GetMapping
-    @Secured(allowedUsers = {"jj@mail.com"}, isLoggedIn = false, isAdmin = true)
+    @Secured(isAdmin = true)
     // Reminder: @ResponseBody & @RequestBody is using jackson under the hood for JSON marshalling (parsing to and from JSON to Java Object)
     public List<MemberResponse> findAll(){
         return memberService.readAll();
