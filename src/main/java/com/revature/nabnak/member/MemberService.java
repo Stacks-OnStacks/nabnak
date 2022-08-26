@@ -12,141 +12,73 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.sql.Date;
 import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-@Service // Any stereotypical annotation in spring (Component, Controller, Service, Repository) they all automatically add @Autowired to the Constructor (requires 1 constructor)
+@Service
 public class MemberService {
-    // Attributes
-    private final MemberRepository memberRepository;
-    private Member sessionMember = null;
-    private final Logger logger = LogManager.getLogger();
 
-    // CONSTRUCTOR
-    @Autowired // this is defaulty added due to the Service Above
+    private final MemberRepository memberRepository;
+
+    @Autowired
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
-    // Methods
 
     @Transactional
     public MemberResponse registerMember(NewRegistrationRequest newRegistration) throws InvalidUserInputException, ResourcePersistanceException{
-
-            Member newMember = new Member();
-
-            newMember.setEmail(newRegistration.getEmail());
-            newMember.setFullName(newRegistration.getFullName());
-            newMember.setExperienceMonths(newRegistration.getExperienceMonths());
-            newMember.setPassword(newRegistration.getPassword());
-            newMember.setId(UUID.randomUUID().toString());
-            // Java will set these for up
-            newMember.setRegistrationDate(new Date(System.currentTimeMillis()));
-
-            logger.info("Member registration service has begun with the provide: {}", newMember);
-            if (!isMemberValid(newMember)) {
-                throw new InvalidUserInputException("User input was invalid");
-            }
-
-            if(isEmailAvailable(newMember.getEmail())){
-                throw new ResourcePersistanceException("Email is already registered please try logging in.");
-            }
-
-            newMember = memberRepository.save(newMember);
-
-            return new MemberResponse(newMember);
-
+            Member newMember = new Member(newRegistration);
+            isEmailAvailable(newMember.getEmail());
+            return new MemberResponse(memberRepository.save(newMember));
     }
-    // TODO: Comeback for custom Repo method
+
     @Transactional
     public Member login(String email, String password){
         Member member = memberRepository.loginCredentialCheck(email, password).orElseThrow(ResourceNotFoundException::new);
-        sessionMember = member;
         return member;
     }
 
     // TODO: NEW READ ME (Lines 76 - 105)
     @Transactional(readOnly = true)
     public List<MemberResponse> readAll(){
-
-        // Streams are a form of functional programming this is form a declarative programming
-        List<MemberResponse> members = ((Collection<Member>) memberRepository.findAll()) // findAll now returns an Iterable we can cast an iterable to a Collection so we can stream it
-                                                .stream()//this reads through each value inside of the collection (aka our List)
-                                                //.map(member -> new MemberResponse(member))
-                                                // this is leveraging (::) which is know as the method reference operator, it's taking the method from MemberReponse and applying to all objects in the stream
-                                                .map(MemberResponse::new)
-                                                .collect(Collectors.toList());
-
-        return members;
+        return  ((Collection<Member>) memberRepository  .findAll())
+                                                        .stream()
+                                                        .map(MemberResponse::new)
+                                                        .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
     public MemberResponse findById(String email){
-
-        // Optional
         Member member = memberRepository.findById(email).orElseThrow(ResourceNotFoundException::new);
         MemberResponse responseMember = new MemberResponse(member);
         return responseMember;
     }
 
-    public boolean isMemberValid(Member newMember){
-        if(newMember == null) return false;
-        // this || is the expression to signify to the conditional that if either of these are true then perform the action
-        if(newMember.getEmail() == null || newMember.getEmail().trim().equals("")) return false;
-        if(newMember.getFullName() == null || newMember.getFullName().trim().equals("")) return false;
-        if(newMember.getExperienceMonths() < 0 ) return false;
-        if(newMember.getRegistrationDate() == null || newMember.getRegistrationDate().toString().trim().equals("")) return false;
-        if(newMember.getPassword() == null || newMember.getPassword().trim().equals("")) return false;
-        return true;
-    }
-
-    // TODO: IMPLEMENT MEEEEEEE!!!!!!!
     @Transactional(readOnly = true)
-    public boolean isEmailAvailable(String email){
-        boolean result = memberRepository.checkEmail(email).isPresent();
-        logger.info("Value from is email Available returned: {}", result);
-        return result;
+    public void isEmailAvailable(String email){
+        if(memberRepository.checkEmail(email).isPresent()) throw new InvalidUserInputException("Email: " + email + " is already registered please try again. Or Log in with email & password.");
     }
 
     @Transactional
-    public boolean remove(String email){
-        Member member = memberRepository.findById(email).orElseThrow(ResourceNotFoundException::new);
-        memberRepository.delete(member);
-        return true;
+    public void remove(String email){
+        memberRepository.deleteById(email);
     }
 
-
     @Transactional
-    public boolean update(EditMemberRequest editMember) throws InvalidUserInputException{
-
+    public void update(EditMemberRequest editMember) throws InvalidUserInputException{
        Member foundMember = memberRepository.findById(editMember.getId()).orElseThrow(ResourceNotFoundException::new);
+       Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
 
-       // Predicate - to evaluate a true or false given a lambda expression
-        // Lambda expression (arrow notation) - a syntax for a SINGULAR function
-        Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
+       if(notNullOrEmpty.test(editMember.getFullName())) foundMember.setFullName(editMember.getFullName());
 
-        // Example of Automatic Dirty Checking
-       if(notNullOrEmpty.test(editMember.getFullName())){
-           foundMember.setFullName(editMember.getFullName());
-        }
-       if(notNullOrEmpty.test(editMember.getPassword())){
-               foundMember.setPassword(editMember.getPassword());
-       }
+       if(notNullOrEmpty.test(editMember.getPassword())) foundMember.setPassword(editMember.getPassword());
+
        if(notNullOrEmpty.test(editMember.getEmail())){
-           if(isEmailAvailable(editMember.getEmail())){
-               throw new ResourcePersistanceException("The provided email is already registered");
-           }
+           isEmailAvailable(editMember.getEmail());
            foundMember.setEmail(editMember.getEmail());
        }
-
-        return true;
-    }
-
-    public Member getSessionMember(){
-        return sessionMember;
     }
 
 }

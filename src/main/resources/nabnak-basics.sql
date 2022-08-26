@@ -76,3 +76,5 @@ delete from card where status = 'Completed'; -- delete by status
 alter table members drop column registrationdate;
 
 delete from card where card_id in (1,2)
+
+update members set is_admin = true where email = 'jj@mail.com';

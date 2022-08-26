@@ -23,7 +23,6 @@ import java.util.List;
 public class MemberController {
 
     private final MemberService memberService;
-    private final Logger logger = LogManager.getLogger();
 
     @Autowired
     public MemberController(MemberService memberService){
@@ -32,7 +31,6 @@ public class MemberController {
 
     @GetMapping
     @Secured(isAdmin = true)
-    // Reminder: @ResponseBody & @RequestBody is using jackson under the hood for JSON marshalling (parsing to and from JSON to Java Object)
     public List<MemberResponse> findAll(){
         return memberService.readAll();
     }
@@ -43,7 +41,6 @@ public class MemberController {
     }
 
     @GetMapping("/query")
-    // req.getParam("id") is being handled by @RequestParam
     public MemberResponse findByIdQuery(@RequestParam String id){
         return memberService.findById(id);
     }
@@ -56,7 +53,8 @@ public class MemberController {
 
     @PutMapping
     public String update(@RequestBody EditMemberRequest editMemberRequest){
-        return "The update was applied to the member: " + memberService.update(editMemberRequest);
+        memberService.update(editMemberRequest);
+        return "The update was applied to the member";
     }
 
 }
