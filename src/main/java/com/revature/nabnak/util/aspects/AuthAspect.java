@@ -28,7 +28,7 @@ public class AuthAspect {
         this.tokenService = tokenService;
     }
 
-    @Order(1)
+    @Order(1) // sets priority, lower the number higher the priority
     @Around("@annotation(com.revature.nabnak.util.web.Secured)")
     public Object securedEndpoint(ProceedingJoinPoint pjp) throws Throwable {
         Method method = ((MethodSignature) pjp.getSignature()).getMethod();

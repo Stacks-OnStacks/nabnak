@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 
-@CrossOrigin(exposedHeaders = "Authorization")
+@CrossOrigin(exposedHeaders = "Authorization") // CORS - Cross Origin Resource Sharing
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -30,7 +30,7 @@ public class AuthController {
         Member authMember = memberService.login(loginCreds.getEmail(), loginCreds.getPassword());
         Principal payload = new Principal(authMember);
         String token = tokenService.generateToken(payload);
-        resp.setHeader("Authorization", token);
+        resp.setHeader("Authorization", token); // Response Header now has "Authorization": "a;sldkjfa;lsjkdhflikhahlsidufhbalskjdhf:"
         return payload;
     }
 
