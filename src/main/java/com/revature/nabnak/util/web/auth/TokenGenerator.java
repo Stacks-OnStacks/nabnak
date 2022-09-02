@@ -18,15 +18,15 @@ public class TokenGenerator {
         this.jwtConfig = jwtConfig;
     }
 
-    public String createToken(Principal subject) {
+    public String createToken(Principal memberPrincipal) {
 
         long now = System.currentTimeMillis();
 
         JwtBuilder tokenBuilder = Jwts.builder()
-                .setId(subject.getId())
-                .setSubject(subject.getEmail())
+                .setId(memberPrincipal.getId())
+                .setSubject(memberPrincipal.getEmail())
                 .setIssuer("nabnak")
-                .claim("isAdmin", subject.isAdmin())
+                .claim("isAdmin", memberPrincipal.isAdmin())
                 .setIssuedAt(new Date(now))
                 .setExpiration(new Date(now + jwtConfig.getExpiration()))
                 .signWith(jwtConfig.getSigAlg(), jwtConfig.getSigningKey());

@@ -43,7 +43,7 @@ public class CardController {
 
     @PostMapping
     @ResponseStatus(value = HttpStatus.CREATED)
-    @Secured
+    @Secured(isAdmin = true)
     public CardResponse create(@RequestBody NewCardRequest newCardRequest, @RequestHeader(name="Authorization") String token){
         Principal requester = tokenService.extractTokenDetails(token);
         newCardRequest.setMember(new Member(requester.getId(), requester.getEmail(), requester.isAdmin()));
