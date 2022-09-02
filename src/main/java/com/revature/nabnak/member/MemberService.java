@@ -10,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
@@ -40,7 +41,6 @@ public class MemberService {
         return member;
     }
 
-    // TODO: NEW READ ME (Lines 76 - 105)
     @Transactional(readOnly = true)
     public List<MemberResponse> readAll(){
         return  ((Collection<Member>) memberRepository  .findAll())

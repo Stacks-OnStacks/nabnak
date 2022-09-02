@@ -17,8 +17,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.List;
 
-@RestController // RestController is used so we don't have to repeat 1000 @ResponseBody infront of every return type.
-// We can included the @ResponseBody and it'll work just fine.
+@RestController
 @RequestMapping("/member")
 public class MemberController {
 

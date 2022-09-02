@@ -2,15 +2,15 @@ package com.revature.nabnak.card;
 
 import com.revature.nabnak.card.dto.requests.NewCardRequest;
 import com.revature.nabnak.card.dto.responses.CardResponse;
-import com.revature.nabnak.util.exceptions.InvalidUserInputException;
-import com.revature.nabnak.util.exceptions.ResourceNotFoundException;
-import com.revature.nabnak.util.exceptions.ResourcePersistanceException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import com.revature.nabnak.member.Member;
+import com.revature.nabnak.util.web.Secured;
+import com.revature.nabnak.util.web.auth.DTO.response.Principal;
+import com.revature.nabnak.util.web.auth.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController
@@ -18,10 +18,12 @@ import java.util.List;
 public class CardController {
 
     private final CardService cardService;
+    private final TokenService tokenService;
 
     @Autowired
-    public CardController(CardService cardService){
+    public CardController(CardService cardService, TokenService tokenService){
         this.cardService = cardService;
+        this.tokenService = tokenService;
     }
 
     @GetMapping
@@ -40,7 +42,11 @@ public class CardController {
     }
 
     @PostMapping
-    public CardResponse create(@RequestBody NewCardRequest newCardRequest){
+    @ResponseStatus(value = HttpStatus.CREATED)
+    @Secured
+    public CardResponse create(@RequestBody NewCardRequest newCardRequest, @RequestHeader(name="Authorization") String token){
+        Principal requester = tokenService.extractTokenDetails(token);
+        newCardRequest.setMember(new Member(requester.getId(), requester.getEmail(), requester.isAdmin()));
         return cardService.addCard(newCardRequest);
     }
 

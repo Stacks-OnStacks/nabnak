@@ -1,5 +1,6 @@
 package com.revature.nabnak.card.dto.requests;
 
+import com.revature.nabnak.member.Member;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ public class NewCardRequest {
     private int points;
     private String tech;
     private String status;
+    private Member member;
 
     public NewCardRequest(String description, int points, String tech, String status) {
         this.description = description;

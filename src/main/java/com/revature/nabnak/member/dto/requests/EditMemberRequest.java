@@ -1,7 +1,7 @@
 package com.revature.nabnak.member.dto.requests;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
-import com.revature.nabnak.util.web.DTO.EditResourceRequests;
+import com.revature.nabnak.util.web.auth.DTO.request.EditResourceRequests;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

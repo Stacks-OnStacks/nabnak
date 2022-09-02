@@ -7,9 +7,12 @@ import com.revature.nabnak.member.dto.requests.NewRegistrationRequest;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
@@ -41,7 +44,8 @@ public class Member {
     @Column(columnDefinition = "boolean default false")
     private boolean isAdmin = false;
 
-    @OneToMany(mappedBy = "memberId", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "memberId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @Transient
     private Set<Card> cards;
 
     public Member(NewRegistrationRequest newRegistration) {
@@ -51,5 +55,11 @@ public class Member {
         this.password = newRegistration.getPassword();
         this.id = UUID.randomUUID().toString();
         this.registrationDate = new Date(System.currentTimeMillis());
+    }
+
+    public Member(String id, String email, boolean isAdmin) {
+        this.id = id;
+        this.email = email;
+        this.isAdmin = isAdmin;
     }
 }

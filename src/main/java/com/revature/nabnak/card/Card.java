@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.servlet.http.HttpSession;
 
 @Data
 @NoArgsConstructor
@@ -36,6 +37,7 @@ public class Card {
         this.points = cardRequest.getPoints();
         this.tech = Tech.valueOf(cardRequest.getTech().toUpperCase());
         this.status = Status.valueOf(cardRequest.getStatus().toUpperCase());
+        this.memberId = cardRequest.getMember();
     }
 
     public enum Tech{

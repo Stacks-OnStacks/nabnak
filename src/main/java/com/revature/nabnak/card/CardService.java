@@ -2,6 +2,7 @@ package com.revature.nabnak.card;
 
 import com.revature.nabnak.card.dto.requests.NewCardRequest;
 import com.revature.nabnak.card.dto.responses.CardResponse;
+import com.revature.nabnak.member.Member;
 import com.revature.nabnak.member.MemberService;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourceNotFoundException;

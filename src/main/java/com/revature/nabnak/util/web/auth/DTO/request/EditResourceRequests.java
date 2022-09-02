@@ -1,4 +1,4 @@
-package com.revature.nabnak.util.web.DTO;
+package com.revature.nabnak.util.web.auth.DTO.request;
 
 public abstract class EditResourceRequests {
 
