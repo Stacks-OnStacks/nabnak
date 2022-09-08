@@ -6,6 +6,8 @@ import com.revature.nabnak.member.Member;
 import com.revature.nabnak.member.MemberService;
 import com.revature.nabnak.util.exceptions.InvalidUserInputException;
 import com.revature.nabnak.util.exceptions.ResourceNotFoundException;
+import com.revature.nabnak.util.exceptions.UnauthorizedException;
+import com.revature.nabnak.util.web.auth.DTO.response.Principal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,6 +43,16 @@ public class CardService {
         return new CardResponse(cardRepository.save(newCard));
      }
 
+    public List<CardResponse> addMultiCard(List<NewCardRequest> cardRequests) throws InvalidUserInputException{
+
+        cardRequests.forEach(cardRequest -> areEnumsValid(cardRequest));
+
+        List<Card> newCards = cardRequests.stream().map(Card::new).collect(Collectors.toList());
+
+        return ((Collection<Card>) cardRepository.saveAll(newCards)).stream().map(CardResponse::new).collect(Collectors.toList());
+    }
+
+
      public List<CardResponse> findAllCards(){
         return ((Collection<Card>) cardRepository.findAll()).stream().map(CardResponse::new).collect(Collectors.toList());
      }
@@ -60,9 +72,13 @@ public class CardService {
         return updatedCard;
      }
 
-     public boolean delete(String id){
-         cardRepository.deleteById(Integer.parseInt(id));
-        return true;
+     public boolean delete(String id, Principal principal){
+        if(findCardById(id).getMemberEmail().equals(principal.getEmail())) {
+            cardRepository.deleteById(Integer.parseInt(id));
+            return true;
+        } else {
+            throw new UnauthorizedException("Email & Card memberEmail do not match");
+        }
      }
 
      public boolean areEnumsValid(NewCardRequest cardRequest) throws InvalidUserInputException{

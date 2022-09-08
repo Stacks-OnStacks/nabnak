@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/member")
 public class MemberController {
@@ -29,7 +30,6 @@ public class MemberController {
     }
 
     @GetMapping
-    @Secured(isAdmin = true)
     public List<MemberResponse> findAll(){
         return memberService.readAll();
     }

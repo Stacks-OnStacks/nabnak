@@ -1,5 +1,6 @@
 package com.revature.nabnak.card;
 
+import com.revature.nabnak.card.dto.requests.EditCardRequest;
 import com.revature.nabnak.card.dto.requests.NewCardRequest;
 import com.revature.nabnak.card.dto.responses.CardResponse;
 import com.revature.nabnak.member.Member;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.stream.Collectors;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/card")
 public class CardController {
@@ -43,12 +46,29 @@ public class CardController {
 
     @PostMapping
     @ResponseStatus(value = HttpStatus.CREATED)
-    @Secured(isAdmin = true)
+    @Secured
     public CardResponse create(@RequestBody NewCardRequest newCardRequest, @RequestHeader(name="Authorization") String token){
         Principal requester = tokenService.extractTokenDetails(token);
         newCardRequest.setMember(new Member(requester.getId(), requester.getEmail(), requester.isAdmin()));
         return cardService.addCard(newCardRequest);
     }
+
+    @DeleteMapping("/{memberId}")
+    public String delete(@PathVariable String memberId, @RequestHeader(name="Authorization") String token){
+        Principal requester = tokenService.extractTokenDetails(token);
+
+        return  cardService.delete(memberId, requester) ? "Card was successfully deleted":"Card has complication";
+    }
+
+    @PostMapping("/multi")
+    public String multiCreate(@RequestBody List<NewCardRequest> newCardRequests, @RequestHeader(name="Authorization") String token){
+        Principal requester = tokenService.extractTokenDetails(token);
+        newCardRequests.forEach(newRequest -> newRequest.setMember(new Member(requester.getId(), requester.getEmail(), requester.isAdmin())));
+        cardService.addMultiCard(newCardRequests);
+        return "Cards have successfully been added";
+    }
+
+
 
 
 

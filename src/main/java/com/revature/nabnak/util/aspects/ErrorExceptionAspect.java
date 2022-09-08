@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ErrorExceptionAspect {
 
     @ExceptionHandler({ResourcePersistanceException.class, InvalidUserInputException.class})
-    @ResponseStatus(value = HttpStatus.NOT_FOUND)
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     public String exceptionHandling(Exception ex){
-        return "Exception was thrown... " + ex.getClass().getName() + " " + ex.getMessage();
+        return ex.getMessage();
     }
 
     @ExceptionHandler(ResourceNotFoundException.class)
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public String resourceNotFound(ResourceNotFoundException rnf){
-        return "Exception was thrown... " + rnf.getClass().getName() + " " + rnf.getMessage();
+        return rnf.getMessage();
     }
 
     @ExceptionHandler(Exception.class)
