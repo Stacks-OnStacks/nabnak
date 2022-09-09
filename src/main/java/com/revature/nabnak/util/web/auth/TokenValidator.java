@@ -28,7 +28,7 @@ public class TokenValidator {
                     .getBody();
 
             System.out.println(claims);
-            return Optional.of(new Principal(claims.getId(), claims.getSubject(), claims.get("isAdmin", Boolean.class)));
+            return Optional.of(new Principal(claims.getId(), claims.getSubject(), claims.get("isAdmin", Boolean.class), claims.get("avatar", String.class)));
 
         } catch (Exception e) {
             e.printStackTrace();

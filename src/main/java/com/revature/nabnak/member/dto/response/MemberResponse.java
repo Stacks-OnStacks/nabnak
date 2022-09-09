@@ -12,12 +12,15 @@ public class MemberResponse {
     private String fullName;
     private String email;
     private long experienceMonths;
+    private String avatar;
 
     public MemberResponse(Member member){
         this.memberId = member.getId();
         this.email = member.getEmail();
         this.fullName = member.getFullName();
         this.experienceMonths = member.getExperienceMonths();
+        this.avatar = member.getAvatar();
+
     }
 
 }

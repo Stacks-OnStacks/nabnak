@@ -78,3 +78,6 @@ alter table members drop column registrationdate;
 delete from card where card_id in (1,2)
 
 update members set is_admin = true where email = 'jj@mail.com';
+
+update members set avatar = concat('https://avatars.dicebear.com/api/human/', email, '.svg') where avatar is null ;
+select * from members m ;

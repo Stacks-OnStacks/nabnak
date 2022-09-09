@@ -27,6 +27,7 @@ public class TokenGenerator {
                 .setSubject(memberPrincipal.getEmail())
                 .setIssuer("nabnak")
                 .claim("isAdmin", memberPrincipal.isAdmin())
+                .claim("avatar", memberPrincipal.getAvatar())
                 .setIssuedAt(new Date(now))
                 .setExpiration(new Date(now + jwtConfig.getExpiration()))
                 .signWith(jwtConfig.getSigAlg(), jwtConfig.getSigningKey());

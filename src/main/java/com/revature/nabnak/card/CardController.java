@@ -49,7 +49,7 @@ public class CardController {
     @Secured
     public CardResponse create(@RequestBody NewCardRequest newCardRequest, @RequestHeader(name="Authorization") String token){
         Principal requester = tokenService.extractTokenDetails(token);
-        newCardRequest.setMember(new Member(requester.getId(), requester.getEmail(), requester.isAdmin()));
+        newCardRequest.setMember(new Member(requester.getId(), requester.getEmail(), requester.isAdmin(), requester.getAvatar()));
         return cardService.addCard(newCardRequest);
     }
 
@@ -63,7 +63,7 @@ public class CardController {
     @PostMapping("/multi")
     public String multiCreate(@RequestBody List<NewCardRequest> newCardRequests, @RequestHeader(name="Authorization") String token){
         Principal requester = tokenService.extractTokenDetails(token);
-        newCardRequests.forEach(newRequest -> newRequest.setMember(new Member(requester.getId(), requester.getEmail(), requester.isAdmin())));
+        newCardRequests.forEach(newRequest -> newRequest.setMember(new Member(requester.getId(), requester.getEmail(), requester.isAdmin(), requester.getAvatar())));
         cardService.addMultiCard(newCardRequests);
         return "Cards have successfully been added";
     }

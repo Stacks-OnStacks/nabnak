@@ -48,6 +48,8 @@ public class Member {
     @Transient
     private Set<Card> cards;
 
+    private String avatar;
+
     public Member(NewRegistrationRequest newRegistration) {
         this.email = newRegistration.getEmail();
         this.fullName = newRegistration.getFullName();
@@ -55,11 +57,13 @@ public class Member {
         this.password = newRegistration.getPassword();
         this.id = UUID.randomUUID().toString();
         this.registrationDate = new Date(System.currentTimeMillis());
+        this.avatar = newRegistration.getAvatar();
     }
 
-    public Member(String id, String email, boolean isAdmin) {
+    public Member(String id, String email, boolean isAdmin, String avatar) {
         this.id = id;
         this.email = email;
         this.isAdmin = isAdmin;
+        this.avatar = avatar;
     }
 }

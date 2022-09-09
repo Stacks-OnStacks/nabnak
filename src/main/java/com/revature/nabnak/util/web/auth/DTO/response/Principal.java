@@ -1,9 +1,13 @@
 package com.revature.nabnak.util.web.auth.DTO.response;
 
 import com.revature.nabnak.member.Member;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 
+@Data
+@NoArgsConstructor
 public class Principal {
 
     @NotBlank
@@ -14,57 +18,20 @@ public class Principal {
 
     private boolean isAdmin;
 
-    public Principal() {
-        super();
-    }
+    private String avatar;
 
     public Principal(Member authMember) {
         this.id = authMember.getId();
         this.email = authMember.getEmail();
         this.isAdmin = authMember.isAdmin();
+        this.avatar = authMember.getAvatar();
     }
 
-    public Principal(String id, String username, boolean isAdmin) {
+    public Principal(String id, String username, boolean isAdmin, String avatar) {
         this.id = id;
         this.email = username;
         this.isAdmin = isAdmin;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public boolean isAdmin() {
-        return isAdmin;
-    }
-
-    public void setAdmin(boolean admin) {
-        this.isAdmin = admin;
-    }
-
-    public Member extractUser() {
-        return new Member(id, email, isAdmin);
-    }
-
-    @Override
-    public String toString() {
-        return "PrincipalResponse{" +
-                "id='" + id + '\'' +
-                ", username='" + email + '\'' +
-                ", role='" + isAdmin + '\'' +
-                '}';
+        this.avatar = avatar;
     }
 
 }
