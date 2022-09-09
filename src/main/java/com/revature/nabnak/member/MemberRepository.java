@@ -12,4 +12,6 @@ public interface MemberRepository extends CrudRepository<Member, String> {
 
     @Query(value = "FROM Member where email = :email AND password = :password")
     Optional<Member> loginCredentialCheck(String email, String password);
+
+    Optional<Member> findByEmail(String email);
 }

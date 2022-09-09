@@ -51,7 +51,7 @@ public class MemberService {
 
     @Transactional(readOnly = true)
     public MemberResponse findById(String email){
-        Member member = memberRepository.findById(email).orElseThrow(ResourceNotFoundException::new);
+        Member member = memberRepository.findByEmail(email).orElseThrow(ResourceNotFoundException::new);
         MemberResponse responseMember = new MemberResponse(member);
         return responseMember;
     }
